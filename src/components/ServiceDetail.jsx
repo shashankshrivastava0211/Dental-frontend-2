@@ -153,7 +153,7 @@ const ServiceDetail = () => {
               <div className="flex flex-wrap gap-4 mb-8">
                 <Link
                   to="/book-appointment"
-                  className="bg-white text-purple-700 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-purple-50 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-fade-in-up animation-delay-300"
+                  className="bg-white text-cyan-700 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-purple-50 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-fade-in-up animation-delay-300"
                 >
                   Book Appointment
                 </Link>
@@ -169,7 +169,7 @@ const ServiceDetail = () => {
                 {service.features.slice(0, 3).map((feature, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center px-4 py-1.5 rounded-full bg-purple-200 text-purple-900 text-sm font-medium shadow-sm"
+                    className="inline-flex items-center px-4 py-1.5 rounded-full bg-purple-200 text-cyan-900 text-sm font-medium shadow-sm"
                   >
                     <CheckCircle className="w-4 h-4 mr-2" />
                     {feature}
@@ -181,8 +181,8 @@ const ServiceDetail = () => {
             <div className="order-1 md:order-2 relative z-10 flex justify-center animate-fade-in-up animation-delay-300">
               <div className="relative">
                 {/* Decorative elements */}
-                <div className="absolute -top-6 -left-6 w-12 h-12 bg-purple-300 rounded-full opacity-70 animate-pulse"></div>
-                <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-violet-300 rounded-full opacity-70 animate-pulse animation-delay-2000"></div>
+                <div className="absolute -top-6 -left-6 w-12 h-12 bg-cyan-400 rounded-full opacity-70 animate-pulse"></div>
+                <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-cyan-300 rounded-full opacity-70 animate-pulse animation-delay-2000"></div>
 
                 {/* Main image with mask */}
                 <div className="relative overflow-hidden rounded-full border-8 border-white/20 shadow-2xl">
@@ -203,7 +203,7 @@ const ServiceDetail = () => {
                 <div className="absolute top-1/4 -right-8 bg-white p-4 rounded-xl shadow-xl transform rotate-3 animate-float">
                   <div className="flex items-center gap-2">
                     <div className="bg-purple-100 p-2 rounded-lg">
-                      <Star className="w-5 h-5 text-purple-600 fill-purple-600" />
+                      <Star className="w-5 h-5 text-cyan-400 fill-cyan-400" />
                     </div>
                     <div>
                       <p className="text-xs font-medium text-gray-800">

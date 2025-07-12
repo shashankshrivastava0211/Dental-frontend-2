@@ -185,9 +185,9 @@ export function Home() {
             >
               <div className="relative h-full">
                 {/* Decorative elements */}
-                <div className="absolute -top-20 -left-20 w-72 h-72 bg-gradient-to-br from-violet-400/30 to-fuchsia-400/30 rounded-full mix-blend-multiply blur-3xl animate-pulse"></div>
+                <div className="absolute -top-20 -left-20 w-72 h-72 bg-gradient-to-br from-cyan-400/30 to-cyan-400/30 rounded-full mix-blend-multiply blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-gradient-to-br from-indigo-400/30 to-purple-400/30 rounded-full mix-blend-multiply blur-3xl animate-pulse delay-150"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-indigo-600/5 to-purple-600/5 rounded-[3rem] rotate-6 scale-95"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-cyan-600/5 to-cyan-600/5 rounded-[3rem] rotate-6 scale-95"></div>
 
                 {/* Main image container */}
                 <div className="relative w-full h-full group flex justify-center items-center">
@@ -239,8 +239,8 @@ export function Home() {
                 data-aos="fade-down"
                 data-aos-delay="200"
               >
-                <Sparkles className="w-4 h-4 mr-2 text-indigo-600" />
-                <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent font-semibold">
+                <Sparkles className="w-4 h-4 mr-2 text-cyan-600" />
+                <span className="bg-gradient-to-r from-navy-600 via-sky-600 to-cyan-600 bg-clip-text text-transparent font-semibold">
                   Patient Care
                 </span>
               </div>
@@ -251,7 +251,7 @@ export function Home() {
                 data-aos-delay="300"
               >
                 Your Smile Deserves{" "}
-                <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-navy-800 via-sky-600 to-cyan-500 bg-clip-text text-transparent">
                   The Best Care
                 </span>
               </h2>
@@ -295,7 +295,7 @@ export function Home() {
                     data-aos="fade-up"
                     data-aos-delay={700 + index * 100}
                   >
-                    <div className="bg-gradient-to-br from-indigo-600 to-purple-600 p-2 rounded-xl shadow-sm transform transition-transform duration-300 group-hover:scale-110">
+                    <div className="bg-gradient-to-br from-navy-600 to-cyan-400 p-2 rounded-xl shadow-sm transform transition-transform duration-300 group-hover:scale-110">
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-gray-800 font-medium">

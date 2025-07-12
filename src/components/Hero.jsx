@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
-import { ArrowDown } from 'lucide-react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useRef } from "react";
+import { ArrowDown } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Hero({
   badgeIcon: BadgeIcon,
@@ -21,7 +21,7 @@ function Hero({
   floatingBadgeTitle,
   floatingBadgeText,
   scrollToRef,
-  scrollText
+  scrollText,
 }) {
   const heroRef = useRef(null);
 
@@ -30,8 +30,9 @@ function Hero({
     const yOffset = -80; // Offset for fixed header if needed
     const element = scrollToRef.current;
     if (element) {
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
@@ -42,7 +43,7 @@ function Hero({
     >
       <div className="absolute inset-0">
         {/* Main gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-800"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-600 via-cyan-400 to-blue-200"></div>
 
         {/* Animated particles */}
         <div className="absolute inset-0 opacity-20">
@@ -55,10 +56,10 @@ function Hero({
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                   animation: `${5 + Math.random() * 10}s linear infinite`,
-                  animationName: 'float-particle',
+                  animationName: "float-particle",
                   width: `${Math.random() * 15 + 5}px`,
                   height: `${Math.random() * 15 + 5}px`,
-                  backgroundColor: 'white',
+                  backgroundColor: "white",
                   animationDelay: `${Math.random() * 5}s`,
                 }}
               />
@@ -87,12 +88,17 @@ function Hero({
               <div
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-6 sm:mb-8"
                 style={{
-                  animation: 'fade-in-down 0.6s ease-out forwards',
+                  animation: "fade-in-down 0.6s ease-out forwards",
                 }}
                 data-aos="fade-down"
                 data-aos-delay="100"
               >
-                <BadgeIcon className="w-4 h-4 text-indigo-300" style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                <BadgeIcon
+                  className="w-4 h-4 text-indigo-300"
+                  style={{
+                    animation: "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+                  }}
+                />
                 <span className="text-sm sm:text-base font-medium text-white whitespace-nowrap">
                   {badgeText}
                 </span>
@@ -108,7 +114,8 @@ function Hero({
                 fontFamily: "'Belanosima', sans-serif",
               }}
             >
-              {heading} <span className="text-indigo-200">{headingHighlight}</span>{" "}
+              {heading}{" "}
+              <span className="text-indigo-200">{headingHighlight}</span>{" "}
               {headingEnd}
             </h1>
 
@@ -133,30 +140,30 @@ function Hero({
                   className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-indigo-800 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all text-base sm:text-lg relative overflow-hidden"
                   onClick={primaryButtonAction}
                   style={{
-                    position: 'relative',
-                    overflow: 'hidden',
-                    transition: 'all 0.3s ease',
+                    position: "relative",
+                    overflow: "hidden",
+                    transition: "all 0.3s ease",
                   }}
                 >
                   <span className="relative z-10">{primaryButtonText}</span>
                   <span
                     style={{
-                      content: '',
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      width: '0',
-                      height: '0',
-                      background: 'rgba(255, 255, 255, 0.2)',
-                      borderRadius: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      transition: 'width 0.6s ease, height 0.6s ease',
+                      content: "",
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      width: "0",
+                      height: "0",
+                      background: "rgba(255, 255, 255, 0.2)",
+                      borderRadius: "50%",
+                      transform: "translate(-50%, -50%)",
+                      transition: "width 0.6s ease, height 0.6s ease",
                     }}
                     className="absolute inset-0 opacity-0 hover:opacity-100 hover:w-[300%] hover:h-[300%]"
                   ></span>
                 </a>
               )}
-              
+
               {secondaryButtonText && (
                 <button
                   className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all text-base sm:text-lg group"
@@ -175,13 +182,14 @@ function Hero({
 
           {/* Hero Image */}
           {imageSrc && (
-            <div
-              data-aos="fade-left"
-              data-aos-delay="300"
-              className="block"
-            >
+            <div data-aos="fade-left" data-aos-delay="300" className="block">
               <div className="relative">
-                <div className="absolute inset-0 -m-8 bg-indigo-600/30 rounded-full blur-xl" style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}></div>
+                <div
+                  className="absolute inset-0 -m-8 bg-indigo-600/30 rounded-full blur-xl"
+                  style={{
+                    animation: "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+                  }}
+                ></div>
                 <img
                   src={imageSrc}
                   alt={imageAlt || "Hero image"}
@@ -191,10 +199,10 @@ function Hero({
 
                 {/* Floating Badge */}
                 {FloatingBadgeIcon && floatingBadgeTitle && (
-                  <div 
+                  <div
                     className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -left-4 sm:-left-6 md:-left-8 bg-white p-3 sm:p-4 md:p-5 rounded-xl shadow-xl z-20 flex items-center gap-2 sm:gap-3 md:gap-4"
                     style={{
-                      animation: 'float 6s ease-in-out infinite',
+                      animation: "float 6s ease-in-out infinite",
                     }}
                     data-aos="fade-up"
                     data-aos-delay="600"
@@ -229,11 +237,11 @@ function Hero({
               data-aos-delay="500"
             >
               <span>{scrollText}</span>
-              <ArrowDown 
-                className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" 
-                style={{ 
-                  animation: 'bounce 2s infinite',
-                }} 
+              <ArrowDown
+                className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                style={{
+                  animation: "bounce 2s infinite",
+                }}
               />
             </button>
           </div>
@@ -290,9 +298,3 @@ function Hero({
 }
 
 export default Hero;
-
-
-
-
-
-

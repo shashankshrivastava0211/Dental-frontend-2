@@ -232,10 +232,10 @@ const Contact = () => {
         data-aos="fade-up"
       >
         {/* Background pattern */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-indigo-50"></div>
+        <div className="absolute inset-0  bg-gradient-to-r from-navy-900 via-sky-900 to-cyan-800"></div>
         <div className="absolute inset-0 bg-wave-pattern opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-200 rounded-full opacity-50"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg--200 rounded-full opacity-50"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-200 rounded-full opacity-50"></div>
         </div>
 
