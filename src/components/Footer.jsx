@@ -119,7 +119,7 @@ function Footer() {
           content="dental clinic, dentist, dental care, teeth cleaning, dental services"
         />
       </Helmet>
-      <footer className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white py-12 sm:py-16">
+      <footer className="bg-gradient-to-r from-navy-800 via-sky-600 to-cyan-500 text-white py-12 sm:py-16 font-publicSans">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">

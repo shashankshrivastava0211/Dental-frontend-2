@@ -104,7 +104,6 @@ const Contact = () => {
     );
   };
 
-
   const handleWhatsApp = (number) => {
     window.open(`https://wa.me/${number}`, "_blank");
   };
@@ -123,8 +122,8 @@ const Contact = () => {
       subtitle: "Emergency Contact Available",
       value: "+91 844-632-2666",
       icon: <Phone className="text-white w-6 h-6 sm:w-8 sm:h-8" />,
-      gradient: "from-violet-600 to-purple-700",
-      hoverColor: "group-hover:text-violet-600",
+      gradient: "from-teal-600 to-cyan-700",
+      hoverColor: "group-hover:text-teal-600",
       action: () => handleCallClick("+918446322666"),
     },
     {
@@ -133,8 +132,8 @@ const Contact = () => {
       subtitle: "24/7 Support Available",
       value: "drpritesh86@gmail.com",
       icon: <Mail className="text-white w-6 h-6 sm:w-8 sm:h-8" />,
-      gradient: "from-violet-500 to-purple-600",
-      hoverColor: "group-hover:text-violet-500",
+      gradient: "from-teal-500 to-cyan-600",
+      hoverColor: "group-hover:text-teal-500",
       action: () => handleEmailClick("drpritesh86@gmail.com"),
     },
     {
@@ -143,8 +142,8 @@ const Contact = () => {
       subtitle: "Meet Us In Person",
       value: "Pimple Saudagar, Pune",
       icon: <MapPin className="text-white w-6 h-6 sm:w-8 sm:h-8" />,
-      gradient: "from-purple-600 to-violet-700",
-      hoverColor: "group-hover:text-purple-600",
+      gradient: "from-cyan-600 to-teal-700",
+      hoverColor: "group-hover:text-cyan-600",
       action: () => handleViewMap(),
     },
     {
@@ -153,8 +152,8 @@ const Contact = () => {
       subtitle: "Chat with Our Team",
       value: "+91 844-632-2666",
       icon: <MessageCircle className="text-white w-6 h-6 sm:w-8 sm:h-8" />,
-      gradient: "from-purple-600 to-violet-700",
-      hoverColor: "group-hover:text-purple-600",
+      gradient: "from-cyan-600 to-teal-700",
+      hoverColor: "group-hover:text-cyan-600",
       action: () => handleWhatsApp("918446322666"),
     },
   ];

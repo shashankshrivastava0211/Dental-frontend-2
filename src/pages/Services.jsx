@@ -122,7 +122,7 @@ const ServicesPage = () => {
     <div className="min-h-screen  overflow-hidden">
       <Hero {...heroProps} />
 
-      <section className="py-12 lg:py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section className="py-12 lg:py-20 bg-gradient-to-b from-teal-50 to-white overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 md:flex md:items-center">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center">
             {/* Content Side */}
@@ -132,7 +132,7 @@ const ServicesPage = () => {
                 className="absolute -top-20 -left-20 w-72 h-72 opacity-10"
                 style={{
                   background:
-                    "radial-gradient(circle at 30% 107%, #7c3aed 0%, #6d28d9 45%, #5b21b6 80%)",
+                    "radial-gradient(circle at 30% 107%, #14b8a6 0%, #0d9488 45%, #0f766e 80%)",
                   borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
                 }}
               ></div>
@@ -140,7 +140,7 @@ const ServicesPage = () => {
                 className="absolute -bottom-20 -right-20 w-64 h-64 opacity-10"
                 style={{
                   background:
-                    "radial-gradient(circle at 30% 107%, #6d28d9 0%, #5b21b6 45%, #4c1d95 80%)",
+                    "radial-gradient(circle at 30% 107%, #0d9488 0%, #0f766e 45%, #115e59 80%)",
                   borderRadius: "63% 37% 54% 46% / 55% 48% 52% 45%",
                 }}
               ></div>
@@ -329,7 +329,7 @@ const ServicesPage = () => {
                   {/* Learn More Button */}
                   <Link
                     to={`/services/${service.id}`}
-                   className="w-full py-3 bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-purple-600/10 text-indigo-800 font-medium rounded-lg flex items-center justify-center group-hover:from-indigo-500 group-hover:via-violet-500 group-hover:to-purple-600 group-hover:text-white transition-all"
+                    className="w-full py-3 bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-blue-600/10 text-teal-800 font-medium rounded-lg flex items-center justify-center group-hover:from-teal-500 group-hover:via-cyan-500 group-hover:to-blue-600 group-hover:text-white transition-all"
                   >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />

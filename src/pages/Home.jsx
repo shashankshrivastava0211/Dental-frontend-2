@@ -112,12 +112,12 @@ export function Home() {
           <div className="max-w-4xl mx-auto text-center">
             {/* Small Badge */}
             <div
-              className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-800 mb-8 transform hover:scale-105 transition-transform duration-300 self-center lg:self-start backdrop-blur-xl shadow-sm"
+              className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-800 mb-8 transform hover:scale-105 transition-transform duration-300 self-center lg:self-start backdrop-blur-xl shadow-sm"
               data-aos="fade-down"
               data-aos-delay="200"
             >
-              <Sparkles className="w-4 h-4 mr-2 text-indigo-600" />
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent font-semibold">
+              <Sparkles className="w-4 h-4 mr-2 text-teal-600" />
+              <span className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent font-semibold">
                 Welcome to 32 Pearls
               </span>
             </div>
@@ -129,7 +129,7 @@ export function Home() {
               data-aos-delay="400"
             >
               <button
-                className="px-8 py-4 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
                 onClick={() => {
                   navigate("/book-appointment");
                 }}
@@ -144,7 +144,7 @@ export function Home() {
       {/* Stats Banner */}
       <div className="relative -mt-16 z-20 mx-4 lg:mx-8">
         <div className="container mx-auto">
-          <div className="grid grid-cols-4 gap-4 md:gap-6 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl p-6 md:p-8">
+          <div className="grid grid-cols-4 gap-4 md:gap-6 bg-gradient-to-r from-navy-700 via-sky-600 to-cyan-500 rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl p-6 md:p-8 animate-fadeInUp font-publicSans text-white">
             {stats.map((stat, index) => (
               <div
                 ref={statsRef}
@@ -312,11 +312,11 @@ export function Home() {
       {/* Services carousel */}
       <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden flex items-center">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-indigo-50 opacity-70"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-cyan-50 to-teal-50 opacity-70"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.1),transparent_50%)]"></div>
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-200/30 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-teal-200/30 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -325,20 +325,20 @@ export function Home() {
               className="inline-flex items-center justify-center mb-6"
               data-aos="fade-down"
             >
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
-              <span className="mx-4 text-sm md:text-base text-indigo-600 font-semibold uppercase tracking-wider">
+              <div className="h-[1px] w-8 md:w-12 bg-teal-500"></div>
+              <span className="mx-4 text-sm md:text-base text-teal-600 font-semibold uppercase tracking-wider">
                 OUR SERVICES
               </span>
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
+              <div className="h-[1px] w-8 md:w-12 bg-teal-500"></div>
             </div>
 
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-indigo-900 mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-900 mb-6 leading-tight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               Comprehensive{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
                 Dental Services
               </span>
             </h2>
@@ -357,10 +357,10 @@ export function Home() {
           <div className="relative" data-aos="fade-up" data-aos-delay="400">
             {/* Custom Navigation Buttons */}
             <button className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center -translate-x-6">
-              <ChevronLeft className="w-6 h-6 text-violet-700" />
+              <ChevronLeft className="w-6 h-6 text-teal-700" />
             </button>
             <button className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center translate-x-6">
-              <ChevronRight className="w-6 h-6 text-violet-700" />
+              <ChevronRight className="w-6 h-6 text-teal-700" />
             </button>
 
             <div className="px-4">
@@ -396,7 +396,7 @@ export function Home() {
                       data-aos="fade-up"
                       data-aos-delay={100 * index}
                     >
-                      <div className="h-2 rounded-t-md bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700"></div>
+                      <div className="h-2 rounded-t-md bg-gradient-to-r from-teal-700 via-cyan-700 to-blue-700"></div>
                       <div className="p-5 md:p-6 lg:p-8">
                         <div className="mb-5 md:mb-6 flex justify-center">
                           <div className="service-icon w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center">
@@ -417,7 +417,7 @@ export function Home() {
                         <div className="flex justify-center">
                           <Link
                             to={`/services/${service.id}`}
-                            className="inline-flex items-center text-violet-600 font-medium"
+                            className="inline-flex items-center text-teal-600 font-medium"
                           >
                             Learn more <ChevronRight className="ml-1 w-4 h-4" />
                           </Link>
@@ -437,7 +437,7 @@ export function Home() {
           >
             <a
               href="/services"
-              className="inline-flex items-center justify-center px-5 py-2 md:px-6 md:py-3 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors duration-300 shadow-md hover:shadow-lg"
+              className="inline-flex items-center justify-center px-5 py-2 md:px-6 md:py-3 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
             >
               View All Services <ChevronRight className="ml-1 w-4 h-4" />
             </a>
