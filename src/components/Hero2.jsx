@@ -49,7 +49,7 @@ const Hero2 = ({
             {/* Heading */}
             <h1 className="text-3xl xs:text-4xl sm:text-[40px] md:text-5xl lg:text-6xl font-belanosima text-gray-900 mb-4 leading-tight">
               {heading}{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy-600 to-purple-700">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy-600 to-red-700">
                 {headingHighlight}
               </span>{" "}
               {headingEnd}

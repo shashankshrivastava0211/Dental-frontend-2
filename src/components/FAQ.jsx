@@ -325,8 +325,8 @@ function App() {
 							className={`p-3.5 rounded-xl bg-gradient-to-br transition-all duration-500 transform
               ${
 								isOpen
-									? "from-violet-500/20 to-indigo-500/20 text-violet-700 "
-									: "from-violet-500/10 to-indigo-500/10 text-indigo-600 group-hover:from-violet-500/20 group-hover:to-indigo-500/20 group-hover:text-violet-700"
+									? "from-violet-500/20 to-cyan-500/20 text-cyan-700 "
+									: "from-violet-500/10 to-indigo-500/10 text-blue-600 group-blue:from-violet-500/20 group-hover:to-blue-500/20 group-hover:text-violet-700"
 							}`}>
 							{faq.icon}
 						</div>
@@ -343,8 +343,8 @@ function App() {
 							className={`w-5 h-5 ml-auto transition-all duration-500
               ${
 								isOpen
-									? "rotate-180 text-violet-600 scale-110"
-									: "text-indigo-400 group-hover:text-violet-600 group-hover:scale-110"
+									? "rotate-180 text-cyan-600 scale-110"
+									: "text-indigo-400 group-hover:text-cyan-600 group-hover:scale-110"
 							}`}
 						/>
 					</div>
@@ -390,9 +390,9 @@ function App() {
 						<div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
 					</div>
 
-					<h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-indigo-900 mb-6 leading-tight">
+					<h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-blue-500 mb-6 leading-tight">
 						Frequently{" "}
-						<span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+						<span className="bg-gradient-to-r from-cyan-600 to-cyan-600 bg-clip-text text-transparent">
 							Asked Questions
 						</span>
 					</h2>

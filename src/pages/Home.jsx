@@ -25,6 +25,7 @@ import "swiper/css/pagination";
 import { services } from "../Data/ServicesData";
 import FAQ from "../components/FAQ";
 import { useNavigate } from "react-router-dom";
+import { testimonials } from "../constants/constant";
 
 export function Home() {
   // Initialize AOS
@@ -71,34 +72,7 @@ export function Home() {
     threshold: 0.1,
   });
   const navigate = useNavigate();
-  const testimonials = [
-    {
-      name: "Nakul Chandra",
-      service: "Dental Implants",
-      quote:
-        "After my dental implants, I can smile, eat, and talk without any worries. A life-changing experience!",
-      rating: 5,
-      image:
-        "https://images.pexels.com/photos/30026793/pexels-photo-30026793/free-photo-of-portrait-of-a-man-in-a-white-shirt.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      name: "Priya Patel",
-      service: "Cosmetic Dentistry",
-      quote:
-        "32 Pearls completely transformed my smile. The team was professional and caring, and the results far exceeded my expectations!",
-      rating: 5,
-      image:
-        "https://images.pexels.com/photos/31430969/pexels-photo-31430969/free-photo-of-black-and-white-portrait-of-smiling-woman.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-    {
-      name: "Kuldeep Patil",
-      service: "Root Canal",
-      quote:
-        "I had a great experience at 32 Pearls. The staff was friendly and professional, and Dr. Pritesh Jagtap made me feel completely at ease. The care was top-notch, and I’m very happy with the results. Highly recommend!",
-      rating: 5,
-      image: "/images/kuldeep.jpg",
-    },
-  ];
+ 
 
   return (
     <div className="min-h-screen overflow-hidden">
@@ -751,12 +725,12 @@ export function Home() {
             </div>
 
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-indigo-900 mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-blue-900 mb-6 leading-tight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               What Our{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-blue-600 bg-clip-text text-transparent">
                 Patients Say
               </span>
             </h2>
@@ -810,17 +784,17 @@ export function Home() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-purple-900 text-lg">
+                    <h4 className="font-semibold  text--500 text-lg">
                       {testimonial.name}
                     </h4>
-                    <p className="text-sm text-purple-600">
+                    <p className="text-sm   text-blue-500">
                       {testimonial.service}
                     </p>
                   </div>
                 </div>
 
                 {/* Bottom accent */}
-                <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-b-2xl"></div>
+                <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-blue-600 to-cyan-600 rounded-b-2xl"></div>
               </div>
             ))}
           </div>
