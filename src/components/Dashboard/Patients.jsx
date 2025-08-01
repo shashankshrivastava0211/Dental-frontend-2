@@ -27,6 +27,7 @@ import PrescriptionModal from "./PrescriptionModal";
 import { VITE_REACT_APP_BASE_URL } from "../utils/constants";
 import SelectField from "../SelectField";
 import { treatments } from "../../Data/Treatments";
+import BillModal from "./BillModal";
 
 function ConfirmedPatients() {
   const [patients, setPatients] = useState([]);
@@ -44,8 +45,11 @@ function ConfirmedPatients() {
   const [phoneError, setPhoneError] = useState("");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isPrescriptionModalOpen, setIsPrescriptionModalOpen] = useState(false);
+  const [isBillModalOpen, setIsBillModalOpen] = useState(false);
+
   const [selectedAppointmentId, setSelectedAppointmentId] = useState(null);
   const [existingPrescription, setExistingPrescription] = useState(null);
+  const [exhistingBill, setExistingBill] = useState(null);
   const [dateErrors, setDateErrors] = useState({
     startDate: "",
     endDate: "",
@@ -246,6 +250,39 @@ function ConfirmedPatients() {
       );
     }
   };
+
+   const handleBillID = async (appointmentId) => {
+    setSelectedAppointmentId(appointmentId);
+    try {
+  
+      const loadingToast = toast.loading("Fetching Bill data...");
+
+    
+      const response = await axios.get(
+        `${VITE_REACT_APP_BASE_URL}/bill?appointmentId=${appointmentId}`
+      );
+
+      toast.dismiss(loadingToast);
+
+      if (response.data && response.data.length > 0) {
+    
+        setExistingBill(response.data[0]);
+        toast.success("Prescription loaded successfully");
+      } else {
+    
+        setExistingPrescription(null);
+      }
+
+    
+      setIsBillModalOpen(true);
+    } catch (error) {
+      console.error("Error fetching prescription:", error);
+      toast.error(
+        error.response?.data?.message || "Failed to fetch prescription details"
+      );
+    }
+  };
+  
 
   const updateAppointmentStatus = async (appointmentId) => {
     try {
@@ -618,7 +655,7 @@ function ConfirmedPatients() {
                             {status?.label}
                           </span>
                         </td>
-                        <td className="px-3 py-4">
+                        <td className="px-3 py-4 flex items-center gap-2">
                           <button
                             onClick={() => handlePrescriptionClick(patient._id)}
                             className={`inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md ${
@@ -631,6 +668,21 @@ function ConfirmedPatients() {
                               <>View Prescription</>
                             ) : (
                               <>Add Prescription</>
+                            )}
+                          </button>
+                          
+                           <button
+                            onClick={() => handleBillID(patient._id)}
+                            className={`inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md ${
+                              patient.billID
+                                ? "text-white bg-green-600 hover:bg-green-700"
+                                : "text-white bg-indigo-600 hover:bg-indigo-700"
+                            } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors`}
+                          >
+                            {patient.billID ? (
+                              <>View Bill</>
+                            ) : (
+                              <>Add Bill</>
                             )}
                           </button>
                         </td>
@@ -697,6 +749,23 @@ function ConfirmedPatients() {
           onSave={handleSavePrescription}
         />
       )}
+    {
+         isBillModalOpen && (
+        <BillModal
+          isOpen={isBillModalOpen}
+          onClose={() => {
+            setIsBillModalOpen(false);
+            setSelectedAppointmentId(null);
+            setExistingPrescription(null);
+          }}
+          appointmentId={selectedAppointmentId}
+         existingBill ={exhistingBill}
+          
+        />
+      )}
+    
+      
+      
     </div>
   );
 }
