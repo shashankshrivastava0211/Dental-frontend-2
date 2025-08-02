@@ -28,6 +28,7 @@ import {
 import { Helmet } from "react-helmet";
 import { treatments } from "../../Data/Treatments";
 import { VITE_REACT_APP_BASE_URL } from "../utils/constants";
+import { CLINIC_NAME } from "../../constants/constant";
 
 const SelectField = ({
   label,
@@ -574,10 +575,10 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Edit Dental Appointment | 32 Pearls Dental Clinic</title>
+        <title>Edit Dental Appointment | {CLINIC_NAME}</title>
         <meta
           name="description"
-          content="Manage and update your dental appointment details at 32 Pearls Dental Clinic. Modify appointment time, treatment details, and patient information."
+          content={`Manage and update your dental appointment details at ${CLINIC_NAME}. Modify appointment time, treatment details, and patient information."`}
         />
         <meta
           name="keywords"
@@ -599,11 +600,11 @@ function App() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Edit Dental Appointment | 32 Pearls Dental Clinic"
+          content={`Edit Dental Appointment | ${CLINIC_NAME}`}
         />
         <meta
           name="twitter:description"
-          content="Update and manage your dental appointment details with our easy-to-use interface."
+          content={`Update and manage your dental appointment details with our easy-to-use interface at ${CLINIC_NAME}.`}
         />
       </Helmet>
 
@@ -633,7 +634,6 @@ function App() {
           </div>
 
           <div className="relative z-10 container mx-auto px-4 pt-20 pb-8 md:pt-28">
-
             <header className="">
               <div className="max-w-7xl rounded-3xl bg-white border-b border-gray-200 shadow-sm  mx-auto px-4 py-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">

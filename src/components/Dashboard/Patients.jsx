@@ -1,5 +1,5 @@
 import axios from "axios";
-import { format, isAfter } from "date-fns";
+import { format, isAfter, set } from "date-fns";
 import {
   Calendar,
   CalendarDays,
@@ -251,13 +251,11 @@ function ConfirmedPatients() {
     }
   };
 
-   const handleBillID = async (appointmentId) => {
+  const handleBillID = async (appointmentId) => {
     setSelectedAppointmentId(appointmentId);
     try {
-  
       const loadingToast = toast.loading("Fetching Bill data...");
 
-    
       const response = await axios.get(
         `${VITE_REACT_APP_BASE_URL}/bill?appointmentId=${appointmentId}`
       );
@@ -265,15 +263,12 @@ function ConfirmedPatients() {
       toast.dismiss(loadingToast);
 
       if (response.data && response.data.length > 0) {
-    
         setExistingBill(response.data[0]);
         toast.success("Prescription loaded successfully");
       } else {
-    
-        setExistingPrescription(null);
+        setExistingBill(null);
       }
 
-    
       setIsBillModalOpen(true);
     } catch (error) {
       console.error("Error fetching prescription:", error);
@@ -282,7 +277,6 @@ function ConfirmedPatients() {
       );
     }
   };
-  
 
   const updateAppointmentStatus = async (appointmentId) => {
     try {
@@ -670,8 +664,8 @@ function ConfirmedPatients() {
                               <>Add Prescription</>
                             )}
                           </button>
-                          
-                           <button
+
+                          <button
                             onClick={() => handleBillID(patient._id)}
                             className={`inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md ${
                               patient.billID
@@ -679,11 +673,7 @@ function ConfirmedPatients() {
                                 : "text-white bg-indigo-600 hover:bg-indigo-700"
                             } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors`}
                           >
-                            {patient.billID ? (
-                              <>View Bill</>
-                            ) : (
-                              <>Add Bill</>
-                            )}
+                            {patient.billID ? <>View Bill</> : <>Add Bill</>}
                           </button>
                         </td>
                       </tr>
@@ -749,8 +739,7 @@ function ConfirmedPatients() {
           onSave={handleSavePrescription}
         />
       )}
-    {
-         isBillModalOpen && (
+      {isBillModalOpen && (
         <BillModal
           isOpen={isBillModalOpen}
           onClose={() => {
@@ -759,13 +748,9 @@ function ConfirmedPatients() {
             setExistingPrescription(null);
           }}
           appointmentId={selectedAppointmentId}
-         existingBill ={exhistingBill}
-          
+          existingBill={exhistingBill}
         />
       )}
-    
-      
-      
     </div>
   );
 }

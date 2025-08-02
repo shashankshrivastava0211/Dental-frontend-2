@@ -17,6 +17,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Hero2 from "../components/Hero2";
 import { useNavigate } from "react-router-dom";
+import { NAME, CLINIC_NAME } from "../constants/constant.js";
 
 export const About = () => {
   const teamRef = useRef(null);
@@ -36,7 +37,7 @@ export const About = () => {
 
   const team = [
     {
-      name: "Dr. Pritesh Jagtap",
+      name: `${NAME}`,
       role: "Root Canal Specialist",
       image: "/images/endodentist.jpeg",
 
@@ -233,23 +234,23 @@ export const About = () => {
             >
               <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent tracking-wide leading-relaxed">
                 <span className="border-b-4 border-indigo-900 text-indigo-900 ">
-                  32 Pearls Dental Clinic
+                  {CLINIC_NAME}
                 </span>{" "}
                 - Leading Dental Care Provider
               </h3>
 
               <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
-                At 32 Pearls, we are committed to providing innovative and
+                At {CLINIC_NAME}, we are committed to providing innovative and
                 customized dental services to meet the unique needs of every
                 patient. Our expert team ensures impactful solutions that
                 deliver measurable results for optimal oral health.
               </p>
 
               <p className="text-gray-700 text-base sm:text-lg mb-8 leading-relaxed">
-                32 Pearls Dental Clinic stands out from competitors by offering
-                highly personalized care across all dental specialties. We
-                provide comprehensive dental services to help you achieve and
-                maintain a healthy, beautiful smile that lasts a lifetime.
+                {CLINIC_NAME} stands out from competitors by offering highly
+                personalized care across all dental specialties. We provide
+                comprehensive dental services to help you achieve and maintain a
+                healthy, beautiful smile that lasts a lifetime.
               </p>
 
               <div className="border-l-4 border-indigo-600 pl-6 py-4 mt-8 bg-indigo-50 rounded-r-lg">
@@ -259,7 +260,7 @@ export const About = () => {
                   </span>
                 </h3>
                 <p className="text-gray-700 text-base sm:text-lg">
-                  The name "32 Pearls" represents the complete set of adult
+                  The name "{CLINIC_NAME}" represents the complete set of adult
                   teeth, symbolizing our commitment to comprehensive dental
                   care. Each tooth is precious like a pearl, and we treat them
                   with the care and attention they deserve.

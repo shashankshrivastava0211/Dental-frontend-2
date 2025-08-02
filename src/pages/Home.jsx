@@ -25,7 +25,7 @@ import "swiper/css/pagination";
 import { services } from "../Data/ServicesData";
 import FAQ from "../components/FAQ";
 import { useNavigate } from "react-router-dom";
-import { testimonials } from "../constants/constant";
+import { CLINIC_NAME, testimonials } from "../constants/constant";
 
 export function Home() {
   // Initialize AOS
@@ -72,7 +72,6 @@ export function Home() {
     threshold: 0.1,
   });
   const navigate = useNavigate();
- 
 
   return (
     <div className="min-h-screen overflow-hidden">
@@ -235,10 +234,10 @@ export function Home() {
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
-                At 32 Pearls Dental Clinic, we believe that a healthy smile is
-                essential to your overall well-being. Our state-of-the-art
-                facility is designed to provide you with the highest quality
-                dental care in a comfortable and relaxing environment.
+                {CLINIC_NAME}, we believe that a healthy smile is essential to
+                your overall well-being. Our state-of-the-art facility is
+                designed to provide you with the highest quality dental care in
+                a comfortable and relaxing environment.
               </p>
 
               <p

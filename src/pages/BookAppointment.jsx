@@ -34,6 +34,7 @@ import "aos/dist/aos.css";
 import { VITE_REACT_APP_BASE_URL } from "../components/utils/constants";
 import SelectField from "../components/SelectField";
 import { treatments } from "../Data/Treatments";
+import { PHONE } from "../constants/constant";
 
 function BookAppointment() {
   const navigate = useNavigate();
@@ -758,7 +759,7 @@ function BookAppointment() {
                       className="inline-flex items-center px-4 py-2 bg-white text-indigo-600 rounded-xl font-semibold hover:bg-indigo-50 transition-colors"
                     >
                       <Phone className="w-5 h-5 mr-2" />
-                      +91 844-632-2666
+                      {PHONE}
                     </a>
                   </div>
                 </div>

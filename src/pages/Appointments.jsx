@@ -30,6 +30,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { VITE_REACT_APP_BASE_URL } from "../components/utils/constants";
 import SelectField from "../components/SelectField";
+import { PHONE } from "../constants/constant";
 
 function Appointments() {
   const [searchPhone, setSearchPhone] = useState("");
@@ -71,7 +72,7 @@ function Appointments() {
     { value: "child_procedure", label: "Child Procedure" },
     { value: "gum_care", label: "Gum Care" },
     { value: "orthodontic", label: "Orthodontic Treatment" },
-    { value: "x_ray", label: "Dental X-Ray" }
+    { value: "x_ray", label: "Dental X-Ray" },
   ];
 
   const heroProps = {
@@ -358,8 +359,6 @@ function Appointments() {
     </div>
   );
 
-
-  
   const FilterPanel = ({ className = "", isMobile = false }) => (
     <div
       className={`${className} bg-white rounded-3xl shadow-xl p-4  border border-indigo-50 ${
@@ -558,14 +557,14 @@ function Appointments() {
                   <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl shadow-xl p-6 text-white">
                     <h3 className="text-xl font-bold mb-4">Emergency Care</h3>
                     <p className="mb-4">
-                      Available 24/7 for urgent dental needs
+                      Available 24/7 for urgent dental need
                     </p>
                     <a
                       href="tel:+918446322666"
                       className="inline-flex items-center px-4 py-2 bg-white text-indigo-600 rounded-xl font-semibold hover:bg-indigo-50 transition-colors"
                     >
                       <Phone className="w-5 h-5 mr-2" />
-                      +91 &nbsp; 844-632-2666
+                      +91 &nbsp; {PHONE}
                     </a>
                   </div>
                 </div>

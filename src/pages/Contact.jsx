@@ -15,6 +15,7 @@ import {
   Twitter,
 } from "lucide-react";
 import Hero from "../components/Hero";
+import { CLINIC_NAME, EMAIL } from "../constants/constant";
 
 const Contact = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -130,11 +131,11 @@ const Contact = () => {
       id: 2,
       title: "Email Us",
       subtitle: "24/7 Support Available",
-      value: "drpritesh86@gmail.com",
+      value: `${EMAIL}`,
       icon: <Mail className="text-white w-6 h-6 sm:w-8 sm:h-8" />,
       gradient: "from-teal-500 to-cyan-600",
       hoverColor: "group-hover:text-teal-500",
-      action: () => handleEmailClick("drpritesh86@gmail.com"),
+      action: () => handleEmailClick(EMAIL),
     },
     {
       id: 3,
@@ -589,7 +590,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-sm sm:text-base text-gray-900">
-                    32 Pearls Dental Clinic
+                    {CLINIC_NAME}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600">
                     Premier Dental Care

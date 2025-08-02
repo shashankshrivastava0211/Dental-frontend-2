@@ -12,6 +12,7 @@ import {
   Facebook,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { CLINIC_NAME } from "../constants/constant";
 
 const navigation = [
   { name: "Home", path: "/" },
@@ -103,10 +104,10 @@ const Header = () => {
   return (
     <>
       <Helmet>
-        <title>32 Pearls Dental Clinic | Professional Dental Care</title>
+        <title>{CLINIC_NAME} | Professional Dental Care</title>
         <meta
           name="description"
-          content="32 Pearls Dental Clinic provides exceptional dental care with a team of experienced professionals using the latest technology."
+          content={`${CLINIC_NAME} provides exceptional dental care with a team of experienced professionals using the latest technology.`}
         />
         <meta
           name="keywords"
@@ -115,22 +116,22 @@ const Header = () => {
         <link rel="canonical" href="https://32pearlsdental.com" />
         <meta
           property="og:title"
-          content="32 Pearls Dental Clinic | Professional Dental Care"
+          content={`${CLINIC_NAME} | Professional Dental Care`}
         />
         <meta
           property="og:description"
-          content="32 Pearls Dental Clinic provides exceptional dental care with a team of experienced professionals using the latest technology."
+          content={`${CLINIC_NAME} provides exceptional dental care with a team of experienced professionals using the latest technology.`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://32pearlsdental.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="32 Pearls Dental Clinic | Professional Dental Care"
+          content={`${CLINIC_NAME} | Professional Dental Care`}
         />
         <meta
           name="twitter:description"
-          content="32 Pearls Dental Clinic provides exceptional dental care with a team of experienced professionals using the latest technology."
+          content={`${CLINIC_NAME} provides exceptional dental care with a team of experienced professionals using the latest technology.`}
         />
       </Helmet>
       <nav
@@ -152,7 +153,7 @@ const Header = () => {
               <Link
                 to="/"
                 className="flex items-center transition-all duration-300 hover:scale-105"
-                aria-label="32 Pearls Dental Clinic Home"
+                aria-label={`${CLINIC_NAME} Home`}
               >
                 <div className="flex items-center">
                   <div className="mr-1.5 sm:mr-2 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 p-1 sm:p-1.5 shadow-md">

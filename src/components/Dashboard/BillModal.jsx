@@ -2,16 +2,13 @@ import React, { useState, useEffect } from "react";
 import { X, Plus, Minus, FileText, AlertCircle } from "lucide-react";
 import { VITE_REACT_APP_BASE_URL } from "../utils/constants";
 
-
-
 const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
   const [bill, setBill] = useState({
-    
+    items: [{ description: "", amount: "" }],
     discount: "",
     tax: "",
     notes: "",
     amount: 0,
-    
   });
 
   const [errors, setErrors] = useState({ items: false });
@@ -20,17 +17,28 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
     if (existingBill) {
       setBill({
         ...existingBill,
-      
+        items: (
+          existingBill.items || [
+            { description: "", amount: "", discount: "", tax: "" },
+          ]
+        ).map((item) => ({
+          ...item,
+          tax: item.tax || "",
+          discount: item.discount || "",
+          amount: item.amount || "",
+          description: item.description || "",
+        })),
         discount: existingBill.discount || "",
         tax: existingBill.tax || "",
         notes: existingBill.notes || "",
       });
     } else {
       setBill({
-     
+        items: [{ description: "", amount: "" }],
         discount: "",
         tax: "",
         notes: "",
+        amount: 0,
       });
     }
     setErrors({ items: false });
@@ -46,7 +54,13 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
   };
 
   const addItem = () => {
-    setBill({ ...bill, items: [...bill.items, defaultBillItem] });
+    setBill({
+      ...bill,
+      items: [
+        ...bill.items,
+        { description: "", amount: "", discount: "", tax: "" },
+      ],
+    });
   };
 
   const removeItem = (index) => {
@@ -70,20 +84,43 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
     e.preventDefault();
     if (!validateForm()) return;
 
+    if (existingBill) {
+      // If editing an existing bill, we might want to update it instead
+      const response = await fetch(
+        `${VITE_REACT_APP_BASE_URL}/bill/${existingBill._id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(bill),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to update bill");
+      }
+
+      const data = await response.json();
+      onClose(); // Close modal after saving
+      return;
+    }
+
     // Calculate total amount from items
     const amount = bill.items
       .filter((item) => item.description.trim() !== "")
       .reduce((sum, item) => sum + (parseFloat(item.amount) || 0), 0);
 
-    // Prepare payload as per backend requirements
+    // Prepare payload including items
     const payload = {
       appointmentId,
       amount,
       isBaseAdded: true, // or set as needed
       discount: parseFloat(bill.discount) || 0,
-      paymentMethod: "cash", // or set as needed
-      isPaid: false, // or set as needed
+      paymentMethod: "cash",
+      isPaid: false,
       notes: bill.notes,
+      items: bill.items, // <- include items array here
     };
 
     try {
@@ -100,8 +137,8 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
       }
 
       const data = await response.json();
-      
-        onClose(); // Close modal after saving
+
+      onClose(); // Close modal after saving
     } catch (error) {
       // Handle error (show toast, etc.)
       console.error(error);
@@ -111,13 +148,13 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
   if (!isOpen) return null;
 
   // Calculate totals
-  // const subtotal = bill.items.reduce(
-  //   (sum, item) => sum + (parseFloat(item.amount) || 0),
-  //   0
-  // );
+  const subtotal = bill.items.reduce(
+    (sum, item) => sum + (parseFloat(item.amount) || 0),
+    0
+  );
   const discount = parseFloat(bill.discount) || 0;
   const tax = parseFloat(bill.tax) || 0;
-  // const total = subtotal - discount + tax;
+  const total = subtotal - discount + tax;
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50 flex items-center justify-center p-4">
@@ -156,48 +193,51 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
               </div>
             )}
             <div className="space-y-4">
-              {[{description:"abc",
-              amount:50,
-              discount:10,
-              tax:10,
-              total:30}].map((item, index) => (
-                <div key={index} className="p-4 border border-gray-200 rounded-xl bg-gray-50">
+              {bill.items.map((item, index) => (
+                <div
+                  key={index}
+                  className="p-4 border border-gray-200 rounded-xl bg-gray-50"
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Description
+                      </label>
                       <input
                         type="text"
                         value={item.description}
-                        onChange={(e) => handleItemChange(index, "description", e.target.value)}
-                        className={`w-full px-3 py-2 border ${
-                          errors.items ? "border-red-300 ring-1 ring-red-300" : "border-gray-300"
-                        } rounded-lg focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500`}
+                        onChange={(e) =>
+                          handleItemChange(index, "description", e.target.value)
+                        }
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
                         placeholder="Service or item description"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Amount (₹)</label>
-                      <div className="flex items-center">
-                        <input
-                          type="number"
-                          min="0"
-                          step="0.01"
-                          value={item.amount}
-                          onChange={(e) => handleItemChange(index, "amount", e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
-                          placeholder="Amount"
-                        />
-                        {index > 0 && (
-                          <button
-                            type="button"
-                            onClick={() => removeItem(index)}
-                            className="ml-2 p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-                          >
-                            <Minus className="h-5 w-5" />
-                          </button>
-                        )}
-                      </div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Amount (₹)
+                      </label>
+                      <input
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        value={item.amount}
+                        onChange={(e) =>
+                          handleItemChange(index, "amount", e.target.value)
+                        }
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                        placeholder="Amount"
+                      />
                     </div>
+                    {bill.items.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() => removeItem(index)}
+                        className="ml-2 p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+                      >
+                        <Minus className="h-5 w-5" />
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}
@@ -207,7 +247,9 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
           {/* Discount, Tax, and Total */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 border border-gray-200 rounded-xl bg-gray-50">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Discount (₹)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Discount (₹)
+              </label>
               <input
                 type="number"
                 min="0"
@@ -219,7 +261,9 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Tax (₹)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Tax (₹)
+              </label>
               <input
                 type="number"
                 min="0"
@@ -231,10 +275,12 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Total (₹)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Total (₹)
+              </label>
               <input
                 type="text"
-                value={100}
+                value={total}
                 readOnly
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700"
               />

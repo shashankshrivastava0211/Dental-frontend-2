@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { VITE_REACT_APP_BASE_URL } from "../utils/constants";
+import { PHONE } from "../../constants/constant";
 
 function AppointmentDetails() {
   const { id } = useParams();
@@ -215,9 +216,18 @@ function AppointmentDetails() {
           name="description"
           content="View and manage your dental appointment details at our modern clinic in Pimple Saudagar, Pune. Track appointment status, prescriptions, and more."
         />
-        <meta name="keywords" content="dental appointment, dental clinic pune, appointment details, dental care pune" />
-        <meta property="og:title" content="Appointment Details | Modern Dental Care Pune" />
-        <meta property="og:description" content="View and manage your dental appointment details at our modern clinic in Pimple Saudagar, Pune." />
+        <meta
+          name="keywords"
+          content="dental appointment, dental clinic pune, appointment details, dental care pune"
+        />
+        <meta
+          property="og:title"
+          content="Appointment Details | Modern Dental Care Pune"
+        />
+        <meta
+          property="og:description"
+          content="View and manage your dental appointment details at our modern clinic in Pimple Saudagar, Pune."
+        />
         <meta property="og:type" content="website" />
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://yourdomain.com/appointments" />
@@ -507,7 +517,7 @@ function AppointmentDetails() {
                       className="inline-flex items-center px-4 py-2 bg-white text-indigo-600 rounded-xl font-semibold hover:bg-indigo-50 transition-colors"
                     >
                       <Phone className="w-5 h-5 mr-2" />
-                      +91 <span className="ml-2">844-632-2666</span>
+                      +91 <span className="ml-2">{PHONE}</span>
                     </a>
                   </div>
 
@@ -520,8 +530,10 @@ function AppointmentDetails() {
                       <h3 className="font-semibold">Our Location</h3>
                     </div>
                     <p className="text-gray-600 text-sm">
-                      107, Sai vision,<br />
-                      Kunal Icon Road, Pimple Saudagar,<br />
+                      107, Sai vision,
+                      <br />
+                      Kunal Icon Road, Pimple Saudagar,
+                      <br />
                       Pune, Maharashtra 411027
                     </p>
                   </div>

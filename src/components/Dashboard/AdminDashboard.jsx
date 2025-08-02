@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Auth/AuthContext";
+import { NAME } from "../../constants/constant";
 
 const navigation = [
   { name: "Dashboard", href: "/admin-dashboard", icon: Home },
@@ -104,9 +105,7 @@ export const AdminDashboard = () => {
               }`}
             >
               <div className="flex flex-col truncate min-w-[140px] text-center">
-                <h3 className="font-semibold text-gray-800 truncate">
-                  Dr. Pritesh Jagtap
-                </h3>
+                <h3 className="font-semibold text-gray-800 truncate">{NAME}</h3>
                 <p className="text-sm text-purple-500 truncate">
                   Welcome back, Doctor
                 </p>
@@ -191,10 +190,8 @@ export const AdminDashboard = () => {
               <Menu className="h-6 w-6 text-indigo-500" />
             </button>
             <div className="flex items-center gap-3">
-            <div className="flex flex-col truncate min-w-[140px] text-center">
-                <h3 className="font-semibold text-gray-800 truncate">
-                  Dr. Pritesh Jagtap
-                </h3>
+              <div className="flex flex-col truncate min-w-[140px] text-center">
+                <h3 className="font-semibold text-gray-800 truncate">{NAME}</h3>
                 <p className="text-sm text-purple-500 truncate">
                   Welcome back, Doctor
                 </p>
