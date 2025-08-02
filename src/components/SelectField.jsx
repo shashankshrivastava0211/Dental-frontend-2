@@ -72,7 +72,7 @@ const SelectField = ({
 		<div className="relative" ref={dropdownRef}>
 			<label className="block text-sm font-medium text-gray-700 mb-2">
 				<span className="flex items-center">
-					<Icon size={18} className="mr-2 text-indigo-600" />
+					<Icon size={18} className="mr-2 text-cyan-600" />
 					{label}
 				</span>
 			</label>
@@ -82,12 +82,12 @@ const SelectField = ({
 					ref={buttonRef}
 					type="button"
 					onClick={() => setIsOpen(!isOpen)}
-					className={`w-full px-4 py-3 text-left border rounded-xl focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white cursor-pointer hover:border-indigo-400 transition-colors flex items-center justify-between ${
+					className={`w-full px-4 py-3 text-left border rounded-xl focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 bg-white cursor-pointer hover:border-cyan-400 transition-colors flex items-center justify-between ${
 						error ? "border-red-300" : "border-gray-300"
 					}`}>
 					<span className={!value ? "text-gray-500" : ""}>{selectedLabel}</span>
 					<ChevronDown
-						className={`w-5 h-5 text-indigo-600 ml-2 transform transition-transform duration-200 ${
+						className={`w-5 h-5 text-cyan-600 ml-2 transform transition-transform duration-200 ${
 							isOpen ? "rotate-180" : ""
 						}`}
 					/>
@@ -98,7 +98,7 @@ const SelectField = ({
 						className={`absolute z-20 w-full ${
 							dropdownPosition === "bottom" ? "mt-1" : "mb-1 bottom-full"
 						}`}>
-						<div className="bg-white rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 border border-indigo-50 overflow-hidden">
+						<div className="bg-white rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 border border-cyan-50 overflow-hidden">
 							<div className="py-2 max-h-[50vh] overflow-y-auto">
 								{options.map((option) => {
 									const optionValue =
@@ -118,10 +118,10 @@ const SelectField = ({
 											}
 											className={`px-4 py-2 cursor-pointer transition-colors ${
 												String(value) === String(optionValue)
-													? "bg-indigo-100/80 text-indigo-900"
+													? "bg-cyan-100/80 text-cyan-900"
 													: isLunch
 													? "bg-gray-50 text-gray-500"
-													: "hover:bg-indigo-50/80 text-gray-900"
+													: "hover:bg-cyan-50/80 text-gray-900"
 											} ${isDisabled ? "cursor-not-allowed" : ""}`}
 											onKeyDown={(e) => {
 												if (e.key === "Enter" && !isDisabled)
