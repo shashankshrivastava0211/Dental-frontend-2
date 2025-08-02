@@ -554,7 +554,7 @@ function Appointments() {
 											href={`tel:${PHONE}`}
 											className="inline-flex items-center px-4 py-2 bg-white text-cyan-600 rounded-xl font-semibold hover:bg-indigo-50 transition-colors">
 											<Phone className="w-5 h-5 mr-2" />
-											+91 <span className="ml-2">{PHONE}</span>
+											<span className="ml-2">{PHONE}</span>
 										</a>
 									</div>
 								</div>

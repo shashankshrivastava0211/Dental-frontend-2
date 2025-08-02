@@ -499,16 +499,16 @@ function AppointmentDetails() {
 									</div>
 
 									{/* Emergency Contact */}
-									<div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl shadow-xl p-6 text-white">
+									<div className="bg-gradient-to-r from-cyan-600 to-sky-600 rounded-3xl shadow-xl p-6 text-white">
 										<h3 className="text-xl font-bold mb-4">Emergency Care</h3>
 										<p className="mb-4">
 											Available 24/7 for urgent dental needs
 										</p>
 										<a
 											href={`tel:${PHONE}`}
-											className="inline-flex items-center px-4 py-2 bg-white text-indigo-600 rounded-xl font-semibold hover:bg-indigo-50 transition-colors">
+											className="inline-flex items-center px-4 py-2 bg-white text-cyan-600 rounded-xl font-semibold hover:bg-indigo-50 transition-colors">
 											<Phone className="w-5 h-5 mr-2" />
-											+91 <span className="ml-2">{PHONE}</span>
+											<span className="ml-2">{PHONE}</span>
 										</a>
 									</div>
 
