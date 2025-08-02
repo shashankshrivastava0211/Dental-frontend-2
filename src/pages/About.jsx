@@ -38,18 +38,18 @@ export const About = () => {
   const team = [
     {
       name: `${NAME}`,
+      role: "Gum Specialist & Implantologist",
+      image: "/images/Periodontist.jpg",
+      specialization: "BDS, MDS Periodontology",
+      bio: "Expert in gum treatments and dental implant procedures with years of experience.",
+    },
+    {
+      name: `Dr. Pritesh Jagtap`,
       role: "Root Canal Specialist",
       image: "/images/endodentist.jpeg",
 
       specialization: "BDS, MDS Conservative Dentistry & Endodontics",
       bio: "Specialized in advanced root canal treatments with a focus on preserving natural teeth.",
-    },
-    {
-      name: "Dr. Santosh Martande",
-      role: "Gum Specialist & Implantologist",
-      image: "/images/Periodontist.jpg",
-      specialization: "BDS, MDS Periodontology",
-      bio: "Expert in gum treatments and dental implant procedures with years of experience.",
     },
     {
       name: "Dr. Swathi Pissay",
@@ -61,19 +61,10 @@ export const About = () => {
     {
       name: "Dr. Priyadarshani Thakur",
       role: "Children's Specialist",
-      image:
-        "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&h=300",
+      image: "",
       specialization: "BDS, MDS Pedodontics",
       bio: "Dedicated to providing specialized dental care for children in a comfortable environment.",
     },
-    // {
-    //   name: "Dr. Prathamesh Bhujbal",
-    //   role: "Oral Surgeon",
-    //   image:
-    //     "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=300&h=300",
-    //   specialization: "BDS, MDS Oral Surgery",
-    //   bio: "Expert in oral surgical procedures with a focus on patient comfort and recovery.",
-    // },
   ];
 
   const timeline = [
@@ -111,36 +102,36 @@ export const About = () => {
 
   const features = [
     {
-      icon: <Shield className="w-6 h-6 text-indigo-600" />,
+      icon: <Shield className="w-6 h-6 text-cyan-600" />,
       title: "Advanced Technology",
       description:
         "State-of-the-art equipment for precise diagnostics and comfortable treatments.",
     },
     {
-      icon: <Users className="w-6 h-6 text-indigo-600" />,
+      icon: <Users className="w-6 h-6 text-cyan-600" />,
       title: "Expert Team",
       description:
         "Highly qualified dental professionals dedicated to your oral health.",
     },
     {
-      icon: <Award className="w-6 h-6 text-indigo-600" />,
+      icon: <Award className="w-6 h-6 text-cyan-600" />,
       title: "Pain-Free Treatment",
       description:
         "Focus on comfortable, pain-free procedures with sedation options available.",
     },
     {
-      icon: <Clock className="w-6 h-6 text-indigo-600" />,
+      icon: <Clock className="w-6 h-6 text-cyan-600" />,
       title: "Convenient Hours",
       description: "Flexible scheduling to accommodate your busy lifestyle.",
     },
     {
-      icon: <Smile className="w-6 h-6 text-indigo-600" />,
+      icon: <Smile className="w-6 h-6 text-cyan-600" />,
       title: "Patient Satisfaction",
       description:
         "98%+ patient satisfaction rate with focus on comfortable care.",
     },
     {
-      icon: <Sparkles className="w-6 h-6 text-indigo-600" />,
+      icon: <Sparkles className="w-6 h-6 text-cyan-600" />,
       title: "Natural Preservation",
       description:
         "Committed to preserving natural teeth through advanced treatments.",
@@ -218,10 +209,10 @@ export const About = () => {
       {/* Who We Are Section */}
       <section className="py-12 md:py-16 lg:max-h-[90%] relative overflow-hidden flex items-center">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-indigo-50 opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-cyan-50 opacity-70"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.1),transparent_50%)]"></div>
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-200/30 rounded-full blur-3xl"></div>
         </div>
 
@@ -232,8 +223,8 @@ export const About = () => {
               className="w-full lg:w-[60%] mb-8 lg:mb-0  flex flex-col gap-5"
               data-aos="fade-right"
             >
-              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent tracking-wide leading-relaxed">
-                <span className="border-b-4 border-indigo-900 text-indigo-900 ">
+              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-600 via-teal-600 to-sky-600 bg-clip-text text-transparent tracking-wide leading-relaxed">
+                <span className="border-b-4 border-cyan-900 text-cyan-900 ">
                   {CLINIC_NAME}
                 </span>{" "}
                 - Leading Dental Care Provider
@@ -253,9 +244,9 @@ export const About = () => {
                 healthy, beautiful smile that lasts a lifetime.
               </p>
 
-              <div className="border-l-4 border-indigo-600 pl-6 py-4 mt-8 bg-indigo-50 rounded-r-lg">
-                <h3 className="text-xl sm:text-2xl font-semibold text-indigo-900 mb-4">
-                  <span className="border-b-4 border-indigo-900 pb-1">
+              <div className="border-l-4 border-cyan-600 pl-6 py-4 mt-8 bg-cyan-50 rounded-r-lg">
+                <h3 className="text-xl sm:text-2xl font-semibold text-cyan-900 mb-4">
+                  <span className="border-b-4 border-cyan-900 pb-1">
                     Our Name
                   </span>
                 </h3>
@@ -274,10 +265,10 @@ export const About = () => {
               data-aos="fade-left"
             >
               {/* Strategy Card */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg group hover:bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 transition-all duration-500">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg group hover:bg-gradient-to-br from-cyan-600 via-violet-600 to-purple-600 transition-all duration-500">
                 <div className="flex items-start gap-6">
-                  <div className="bg-indigo-100 p-3 rounded-full group-hover:bg-white transition-colors duration-300">
-                    <Tooth className="text-indigo-600 text-2xl sm:text-3xl group-hover:text-indigo-600" />
+                  <div className="bg-cyan-100 p-3 rounded-full group-hover:bg-white transition-colors duration-300">
+                    <Tooth className="text-cyan-600 text-2xl sm:text-3xl group-hover:text-cyan-600" />
                   </div>
                   <div>
                     <h4 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-white">
@@ -293,10 +284,10 @@ export const About = () => {
               </div>
 
               {/* Approach Card */}
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg group hover:bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 transition-all duration-500">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg group hover:bg-gradient-to-br from-cyan-600 via-violet-600 to-purple-600 transition-all duration-500">
                 <div className="flex items-start gap-6">
-                  <div className="bg-indigo-100 p-3 rounded-full group-hover:bg-white transition-colors duration-300">
-                    <UserPlus className="text-indigo-600 text-2xl sm:text-3xl group-hover:text-indigo-600" />
+                  <div className="bg-cyan-100 p-3 rounded-full group-hover:bg-white transition-colors duration-300">
+                    <UserPlus className="text-cyan-600 text-2xl sm:text-3xl group-hover:text-cyan-600" />
                   </div>
                   <div>
                     <h4 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-white">
@@ -313,7 +304,7 @@ export const About = () => {
 
               {/* Logo */}
               <div className="flex justify-center items-center bg-white p-4 rounded-2xl shadow-lg">
-                <div className="mr-1.5 sm:mr-2 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 p-1 sm:p-1.5 shadow-md">
+                <div className="mr-1.5 sm:mr-2 flex items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-purple-600 p-1 sm:p-1.5 shadow-md">
                   <Stethoscope
                     className={`h-28 w-28 md:h-28 md:w-28 text-white`}
                     aria-hidden="true"
@@ -330,9 +321,9 @@ export const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl text-center font-bold text-indigo-900 mb-6">
+              <h2 className="text-4xl text-center font-bold text-cyan-900 mb-6">
                 Why Patients &nbsp;
-                <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
                   Choose Us
                 </span>
               </h2>
@@ -347,7 +338,7 @@ export const About = () => {
                     key={index}
                     className="flex items-start gap-4 p-4 rounded-lg bg-white shadow-sm"
                   >
-                    <div className="bg-gradient-to-br from-indigo-50 via-violet-50 to-purple-50 p-2 rounded-lg">
+                    <div className="bg-gradient-to-br from-cyan-50 via-violet-50 to-purple-50 p-2 rounded-lg">
                       {feature.icon}
                     </div>
                     <div>
@@ -374,12 +365,12 @@ export const About = () => {
                 data-aos-delay="300"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="bg-gradient-to-br from-indigo-50 via-violet-50 to-purple-50 p-3 rounded-lg">
-                    <CalendarCheck className="w-6 h-6 text-indigo-600" />
+                  <div className="bg-gradient-to-br from-cyan-50 via-violet-50 to-purple-50 p-3 rounded-lg">
+                    <CalendarCheck className="w-6 h-6 text-cyan-600" />
                   </div>
                   <a
                     href="/book-appointment"
-                    className="font-semibold text-gray-900 hover:text-indigo-600 transition-colors duration-300"
+                    className="font-semibold text-gray-900 hover:text-cyan-600 transition-colors duration-300"
                   >
                     Book Your Visit
                   </a>
@@ -400,10 +391,10 @@ export const About = () => {
         className="py-12 md:py-16 lg:py-20 relative overflow-hidden flex items-center"
       >
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-indigo-50 opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-cyan-50 opacity-70"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.1),transparent_50%)]"></div>
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-200/30 rounded-full blur-3xl"></div>
         </div>
 
@@ -414,20 +405,20 @@ export const About = () => {
             data-aos="fade-up"
           >
             <div className="inline-flex items-center justify-center mb-6">
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
-              <span className="mx-4 text-sm md:text-base text-indigo-600 font-semibold uppercase tracking-wider">
+              <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
+              <span className="mx-4 text-sm md:text-base text-cyan-600 font-semibold uppercase tracking-wider">
                 Our Professionals
               </span>
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
+              <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
             </div>
 
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-indigo-900 mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-cyan-900 mb-6 leading-tight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               Meet Our{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-600 via-teal-600 to-sky-600 bg-clip-text text-transparent">
                 Expert Team
               </span>
             </h2>
@@ -460,7 +451,7 @@ export const About = () => {
                   />
 
                   {/* Hover Overlay (Specialization and Bio) */}
-                  <div className="absolute inset-0   bg-gradient-to-t from-indigo-900/80 via-indigo-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0   bg-gradient-to-t from-cyan-900/80 via-cyan-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
                       <p className="text-white/80 text-base md:text-sm mb-3">
                         {member.specialization}
@@ -477,7 +468,7 @@ export const About = () => {
                   <h3 className="text-lg font-semibold text-black mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-sm text-indigo-600 font-medium">
+                  <p className="text-sm text-cyan-600 font-medium">
                     {member.role}
                   </p>
                 </div>
@@ -505,20 +496,20 @@ export const About = () => {
             data-aos="fade-up"
           >
             <div className="inline-flex items-center justify-center mb-6">
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
-              <span className="mx-4 text-sm md:text-base text-indigo-600 font-semibold uppercase tracking-wider">
+              <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
+              <span className="mx-4 text-sm md:text-base text-cyan-600 font-semibold uppercase tracking-wider">
                 Our History
               </span>
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
+              <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
             </div>
 
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-indigo-900 mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-cyan-900 mb-6 leading-tight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               Our Journey{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
                 of Excellence
               </span>
             </h2>
@@ -534,7 +525,7 @@ export const About = () => {
 
           <div className="max-w-6xl mx-auto relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 md:left-1/2 top-0 h-full w-0.5 bg-indigo-200"></div>
+            <div className="absolute left-8 md:left-1/2 top-0 h-full w-0.5 bg-cyan-200"></div>
 
             {timeline.map((item, index) => (
               <div
@@ -551,7 +542,7 @@ export const About = () => {
                   }`}
                 >
                   <div className="mb-2">
-                    <span className="inline-block px-4 py-2 rounded-full bg-indigo-600 text-white font-bold">
+                    <span className="inline-block px-4 py-2 rounded-full bg-cyan-600 text-white font-bold">
                       {item.year}
                     </span>
                   </div>
@@ -561,7 +552,7 @@ export const About = () => {
                   <p className="text-gray-600">{item.description}</p>
                 </div>
 
-                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white shadow-md"></div>
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-cyan-600 rounded-full border-4 border-white shadow-md"></div>
 
                 <div className="w-1/2"></div>
               </div>
@@ -579,20 +570,20 @@ export const About = () => {
           {/* Section Header */}
           <div className="text-center mb-12" data-aos="fade-up">
             <div className="inline-flex items-center justify-center mb-6">
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
-              <span className="mx-4 text-sm md:text-base text-indigo-600 font-semibold uppercase tracking-wider">
+              <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
+              <span className="mx-4 text-sm md:text-base text-cyan-600 font-semibold uppercase tracking-wider">
                 Our Purpose
               </span>
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
+              <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
             </div>
 
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-indigo-900 mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-cyan-900 mb-6 leading-tight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               Our Mission &{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
                 Vision
               </span>
             </h2>
@@ -610,7 +601,7 @@ export const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
               <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-bold mb-6 text-indigo-900 border-b-4 border-indigo-600 pb-2 inline-block">
+                <h3 className="text-2xl font-bold mb-6 text-cyan-900 border-b-4 border-cyan-600 pb-2 inline-block">
                   Our Mission
                 </h3>
                 <p className="text-gray-700 mb-8 leading-relaxed">
@@ -620,7 +611,7 @@ export const About = () => {
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-indigo-600 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-cyan-600 mt-1" />
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold text-gray-900">
                         Excellence in Care
@@ -632,7 +623,7 @@ export const About = () => {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Heart className="w-6  h-6 text-indigo-600 mt-1" />
+                    <Heart className="w-6  h-6 text-cyan-600 mt-1" />
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold text-gray-900">
                         Patient-Centered Approach
@@ -644,7 +635,7 @@ export const About = () => {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Award className="w-6 h-6 text-indigo-600 mt-1" />
+                    <Award className="w-6 h-6 text-cyan-600 mt-1" />
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold text-gray-900">
                         Innovation
@@ -661,7 +652,7 @@ export const About = () => {
 
             <div data-aos="fade-left">
               <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-bold mb-6 text-indigo-900 border-b-4 border-indigo-600 pb-2 inline-block">
+                <h3 className="text-2xl font-bold mb-6 text-cyan-900 border-b-4 border-cyan-600 pb-2 inline-block">
                   Our Vision
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-8">
@@ -676,17 +667,17 @@ export const About = () => {
                   {values.map((value, index) => (
                     <div
                       key={index}
-                      className=" p-2 rounded-2xl shadow-lg text-indigo-600  text-center"
+                      className=" p-2 rounded-2xl shadow-lg text-cyan-600  text-center"
                       data-aos="zoom-in"
                       data-aos-delay={index * 100}
                     >
-                      <div className="bg-indigo-600 mx-auto text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center mb-4">
+                      <div className="bg-cyan-600 mx-auto text-cyan-600 w-10 h-10 rounded-full flex items-center justify-center mb-4">
                         {value.icon}
                       </div>
-                      <h3 className="text-base text-indigo-600 font-semibold mb-3">
+                      <h3 className="text-base text-cyan-600 font-semibold mb-3">
                         {value.title}
                       </h3>
-                      <p className="text-sm text-indigo-600">
+                      <p className="text-sm text-cyan-600">
                         {value.description}
                       </p>
                     </div>

@@ -86,12 +86,12 @@ const ServiceDetail = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-r from-navy-800 via-sky-600 to-cyan-500 text-white font-publicSans">
         {/* Background */}
         <div className="absolute inset-0">
+          {/* Remove the old gradient background */}
           {/* Main gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-800"></div>
-
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-800"></div> */}
           {/* Abstract background elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
@@ -118,7 +118,7 @@ const ServiceDetail = () => {
           </div>
 
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/80 via-transparent to-indigo-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-800/80 via-transparent to-cyan-500/80"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 relative z-10">
@@ -486,7 +486,7 @@ const ServiceDetail = () => {
                   ))}
                 </div>
 
-                <div className="mt-10 p-6 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl text-white">
+                <div className="mt-10 p-6 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-xl text-white">
                   <h3 className="text-xl font-semibold mb-4">
                     Long-term Benefits
                   </h3>
@@ -630,7 +630,7 @@ const ServiceDetail = () => {
 
                 <Link
                   to="/contact"
-                  className="block w-full py-3 text-center bg-white text-indigo-700 font-semibold rounded-lg hover:bg-indigo-50 transition-all transform hover:-translate-y-1"
+                  className="block w-full py-3 text-center bg-white text-cyan-700 font-semibold rounded-lg hover:bg-indigo-50 transition-all transform hover:-translate-y-1"
                 >
                   Contact Us
                 </Link>

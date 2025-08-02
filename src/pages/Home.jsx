@@ -78,7 +78,7 @@ export function Home() {
       {/* Photo Section with Fixed Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Fixed Background Image */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1629909615184-74f495363b67')] bg-cover bg-center bg-fixed"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRlbnRpc3R8ZW58MHx8MHx8fDA%3D')] bg-cover bg-center bg-fixed"></div>
 
         {/* Content Container */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -91,7 +91,7 @@ export function Home() {
             >
               <Sparkles className="w-4 h-4 mr-2 text-teal-600" />
               <span className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent font-semibold">
-                Welcome to 32 Pearls
+                Welcome to {CLINIC_NAME}
               </span>
             </div>
 
@@ -424,7 +424,7 @@ export function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-indigo-50"></div>
         <div className="absolute inset-0 bg-wave-pattern opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-200 rounded-full opacity-50"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-200 rounded-full opacity-50"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-200 rounded-full opacity-50"></div>
         </div>
 
@@ -434,8 +434,8 @@ export function Home() {
               className="inline-flex items-center justify-center mb-6"
               data-aos="fade-down"
             >
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
-              <span className="mx-4 text-sm md:text-base text-indigo-600 font-semibold uppercase tracking-wider">
+              <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
+              <span className="mx-4 text-sm md:text-base text-cyan-600 font-semibold uppercase tracking-wider">
                 Process
               </span>
               <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
@@ -447,7 +447,7 @@ export function Home() {
               data-aos-delay="200"
             >
               Dental{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Treatment Process
               </span>
             </h2>
@@ -487,8 +487,8 @@ export function Home() {
                       x2="100%"
                       y2="0%"
                     >
-                      <stop offset="0%" stopColor="#4f46e5" />
-                      <stop offset="100%" stopColor="#8b5cf6" />
+                      <stop offset="0%" stopColor="#06b6d4" />
+                      <stop offset="100%" stopColor="#38bdf8" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -500,16 +500,16 @@ export function Home() {
                 data-aos="fade-right"
                 data-aos-delay="200"
               >
-                <div className="bg-white rounded-xl shadow-lg p-6 border border-purple-100">
+                <div className="bg-white rounded-xl shadow-lg p-6 border border-cyan-100">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-purple-100 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
-                      <Calendar className="w-7 h-7 text-purple-600" />
+                    <div className="bg-cyan-100 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
+                      <Calendar className="w-7 h-7 text-cyan-600" />
                     </div>
                     <div>
-                      <span className="text-sm font-semibold text-purple-600">
+                      <span className="text-sm font-semibold text-cyan-600">
                         STEP 01
                       </span>
-                      <h3 className="text-xl font-bold text-gray-900">
+                      <h3 className="text-xl font-bold text-navy-800">
                         Book Appointment
                       </h3>
                     </div>
@@ -524,7 +524,7 @@ export function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
 
-                  <p className="text-gray-600 text-center">
+                  <p className="text-cyan-900 text-center">
                     Schedule your visit through our intuitive booking system.
                     Our team will confirm your appointment within 24 hours.
                   </p>
@@ -554,8 +554,8 @@ export function Home() {
                       x2="100%"
                       y2="0%"
                     >
-                      <stop offset="0%" stopColor="#4f46e5" />
-                      <stop offset="100%" stopColor="#8b5cf6" />
+                      <stop offset="0%" stopColor="#06b6d4" />
+                      <stop offset="100%" stopColor="#38bdf8" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -567,16 +567,16 @@ export function Home() {
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
-                <div className="bg-white rounded-xl shadow-lg p-6 border border-purple-100">
+                <div className="bg-white rounded-xl shadow-lg p-6 border border-cyan-100">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-indigo-100 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
-                      <Stethoscope className="w-7 h-7 text-indigo-600" />
+                    <div className="bg-sky-100 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
+                      <Stethoscope className="w-7 h-7 text-sky-600" />
                     </div>
                     <div>
-                      <span className="text-sm font-semibold text-indigo-600">
+                      <span className="text-sm font-semibold text-sky-600">
                         STEP 02
                       </span>
-                      <h3 className="text-xl font-bold text-gray-900">
+                      <h3 className="text-xl font-bold text-navy-800">
                         Dental Check-up
                       </h3>
                     </div>
@@ -591,7 +591,7 @@ export function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
 
-                  <p className="text-gray-600 text-center">
+                  <p className="text-cyan-900 text-center">
                     Undergo a comprehensive examination with our experienced
                     dental professionals using advanced diagnostic tools.
                   </p>
@@ -621,8 +621,8 @@ export function Home() {
                       x2="100%"
                       y2="0%"
                     >
-                      <stop offset="0%" stopColor="#4f46e5" />
-                      <stop offset="100%" stopColor="#8b5cf6" />
+                      <stop offset="0%" stopColor="#06b6d4" />
+                      <stop offset="100%" stopColor="#38bdf8" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -634,16 +634,16 @@ export function Home() {
                 data-aos="fade-left"
                 data-aos-delay="600"
               >
-                <div className="bg-white rounded-xl shadow-lg p-6 border border-purple-100">
+                <div className="bg-white rounded-xl shadow-lg p-6 border border-cyan-100">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-blue-100 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
-                      <Heart className="w-7 h-7 text-blue-600" />
+                    <div className="bg-cyan-100 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
+                      <Heart className="w-7 h-7 text-cyan-600" />
                     </div>
                     <div>
-                      <span className="text-sm font-semibold text-blue-600">
+                      <span className="text-sm font-semibold text-cyan-600">
                         STEP 03
                       </span>
-                      <h3 className="text-xl font-bold text-gray-900">
+                      <h3 className="text-xl font-bold text-navy-800">
                         Healthy Smile
                       </h3>
                     </div>
@@ -658,7 +658,7 @@ export function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
 
-                  <p className="text-gray-600 text-center">
+                  <p className="text-cyan-900 text-center">
                     Follow your personalized treatment plan and embrace a
                     healthier lifestyle with our ongoing support and guidance.
                   </p>
@@ -688,8 +688,8 @@ export function Home() {
                       x2="100%"
                       y2="0%"
                     >
-                      <stop offset="0%" stopColor="#4f46e5" />
-                      <stop offset="100%" stopColor="#8b5cf6" />
+                      <stop offset="0%" stopColor="#06b6d4" />
+                      <stop offset="100%" stopColor="#38bdf8" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -700,13 +700,11 @@ export function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden flex items-center">
+      <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden flex items-center bg-gradient-to-r from-cyan-800 via-cyan-600 to-cyan-500 text-white font-publicSans">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-indigo-50 opacity-70"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.1),transparent_50%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none ">
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -716,25 +714,25 @@ export function Home() {
             data-aos="fade-up"
           >
             <div className="inline-flex items-center justify-center mb-6">
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
-              <span className="mx-4 text-sm md:text-base text-indigo-600 font-semibold uppercase tracking-wider">
+              <div className="h-[1px] w-8 md:w-12 bg-white/40"></div>
+              <span className="mx-4 text-sm md:text-base text-white font-semibold uppercase tracking-wider">
                 Testimonials
               </span>
-              <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
+              <div className="h-[1px] w-8 md:w-12 bg-white/40"></div>
             </div>
 
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-blue-900 mb-6 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               What Our{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-200 via-white to-cyan-100 bg-clip-text text-transparent">
                 Patients Say
               </span>
             </h2>
             <p
-              className="text-gray-700 max-w-2xl mx-auto text-base md:text-lg"
+              className="text-white/80 max-w-2xl mx-auto text-base md:text-lg"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -751,10 +749,10 @@ export function Home() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                className="bg-white p-8 shadow-lg hover:shadow-xl transition-all relative"
+                className="bg-white/10 p-8 shadow-lg hover:shadow-xl transition-all relative rounded-xl border border-white/10"
               >
                 {/* Quote mark */}
-                <div className="absolute -top-5 -left-2 text-8xl text-purple-200 font-serif leading-none">
+                <div className="absolute -top-5 -left-2 text-8xl text-purple-200/40 font-serif leading-none select-none pointer-events-none">
                   "
                 </div>
 
@@ -763,13 +761,13 @@ export function Home() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
+                      className="w-5 h-5 text-yellow-300 fill-current"
                     />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="text-gray-600 mb-8 italic leading-relaxed relative z-10">
+                <p className="text-white/90 mb-8 italic leading-relaxed relative z-10">
                   "{testimonial.quote}"
                 </p>
 
@@ -783,17 +781,17 @@ export function Home() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-semibold  text--500 text-lg">
+                    <h4 className="font-semibold text-white text-lg">
                       {testimonial.name}
                     </h4>
-                    <p className="text-sm   text-blue-500">
+                    <p className="text-sm text-cyan-100">
                       {testimonial.service}
                     </p>
                   </div>
                 </div>
 
                 {/* Bottom accent */}
-                <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-blue-600 to-cyan-600 rounded-b-2xl"></div>
+                <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-cyan-400 via-sky-400 to-navy-800 rounded-b-2xl"></div>
               </div>
             ))}
           </div>
@@ -806,7 +804,7 @@ export function Home() {
       <section
         className="relative bg-cover bg-center text-white min-h-[400px] sm:min-h-[400px] flex items-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000')`,
+          // backgroundImage: `url('https://images.unsplash.com/photo-162990961365-28e377c37b09?auto=format&fit=crop&w=2000')`,
           backgroundAttachment: "fixed",
         }}
       >

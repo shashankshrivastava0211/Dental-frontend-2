@@ -126,7 +126,7 @@ const Blog = () => {
       date: "April 15, 2024",
       author: "Dr. Sarah Johnson",
       category: "Dental Trends",
-      icon: <TrendingUp className="w-5 h-5 text-indigo-500" />,
+      icon: <TrendingUp className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 2,
@@ -138,7 +138,7 @@ const Blog = () => {
       date: "April 12, 2024",
       author: "Dr. Michael Chen",
       category: "Practice Management",
-      icon: <BookOpen className="w-5 h-5 text-indigo-500" />,
+      icon: <BookOpen className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 3,
@@ -150,7 +150,7 @@ const Blog = () => {
       date: "April 10, 2024",
       author: "Dr. Emma Williams",
       category: "Patient Experience",
-      icon: <Users className="w-5 h-5 text-indigo-500" />,
+      icon: <Users className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 4,
@@ -162,7 +162,7 @@ const Blog = () => {
       date: "April 8, 2024",
       author: "Dr. David Miller",
       category: "Sustainability",
-      icon: <Leaf className="w-5 h-5 text-indigo-500" />,
+      icon: <Leaf className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 5,
@@ -174,7 +174,7 @@ const Blog = () => {
       date: "April 5, 2024",
       author: "Lisa Anderson",
       category: "Dental Marketing",
-      icon: <MessageCircle className="w-5 h-5 text-indigo-500" />,
+      icon: <MessageCircle className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 6,
@@ -186,7 +186,7 @@ const Blog = () => {
       date: "April 3, 2024",
       author: "Dr. James Wilson",
       category: "Staff Training",
-      icon: <GraduationCap className="w-5 h-5 text-indigo-500" />,
+      icon: <GraduationCap className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 7,
@@ -198,7 +198,7 @@ const Blog = () => {
       date: "April 1, 2024",
       author: "Alexandra Peters",
       category: "Dental Trends",
-      icon: <TrendingUp className="w-5 h-5 text-indigo-500" />,
+      icon: <TrendingUp className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 8,
@@ -210,7 +210,7 @@ const Blog = () => {
       date: "March 30, 2024",
       author: "Robert Parker",
       category: "Practice Management",
-      icon: <BookOpen className="w-5 h-5 text-indigo-500" />,
+      icon: <BookOpen className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 9,
@@ -222,7 +222,7 @@ const Blog = () => {
       date: "March 28, 2024",
       author: "Dr. Maria Santos",
       category: "Patient Experience",
-      icon: <Users className="w-5 h-5 text-indigo-500" />,
+      icon: <Users className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 10,
@@ -234,7 +234,7 @@ const Blog = () => {
       date: "March 26, 2024",
       author: "Thomas Green",
       category: "Sustainability",
-      icon: <Leaf className="w-5 h-5 text-indigo-500" />,
+      icon: <Leaf className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 11,
@@ -246,7 +246,7 @@ const Blog = () => {
       date: "March 24, 2024",
       author: "Rachel Kim",
       category: "Dental Marketing",
-      icon: <MessageCircle className="w-5 h-5 text-indigo-500" />,
+      icon: <MessageCircle className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 12,
@@ -258,7 +258,7 @@ const Blog = () => {
       date: "March 22, 2024",
       author: "Dr. Marcus Johnson",
       category: "Staff Training",
-      icon: <GraduationCap className="w-5 h-5 text-indigo-500" />,
+      icon: <GraduationCap className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 13,
@@ -270,7 +270,7 @@ const Blog = () => {
       date: "March 20, 2024",
       author: "Dr. Tech Smith",
       category: "Dental Trends",
-      icon: <TrendingUp className="w-5 h-5 text-indigo-500" />,
+      icon: <TrendingUp className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 14,
@@ -282,7 +282,7 @@ const Blog = () => {
       date: "March 18, 2024",
       author: "Gordon Chef",
       category: "Practice Management",
-      icon: <BookOpen className="w-5 h-5 text-indigo-500" />,
+      icon: <BookOpen className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 15,
@@ -294,7 +294,7 @@ const Blog = () => {
       date: "March 16, 2024",
       author: "Dr. Sophie Turner",
       category: "Patient Experience",
-      icon: <Users className="w-5 h-5 text-indigo-500" />,
+      icon: <Users className="w-5 h-5 text-cyan-500" />,
     },
     {
       id: 16,
@@ -306,7 +306,7 @@ const Blog = () => {
       date: "March 14, 2024",
       author: "Eco Warrior",
       category: "Sustainability",
-      icon: <Leaf className="w-5 h-5 text-indigo-500" />,
+      icon: <Leaf className="w-5 h-5 text-cyan-500" />,
     },
   ];
 
@@ -354,7 +354,7 @@ const Blog = () => {
             className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="absolute top-4 left-4">
-            <span className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white px-4 py-1 rounded-full text-xs sm:text-sm flex items-center gap-1.5">
+            <span className="bg-gradient-to-br from-cyan-600 to-sky-700 text-white px-4 py-1 rounded-full text-xs sm:text-sm flex items-center gap-1.5">
               {post.icon}
               {post.category}
             </span>
@@ -366,7 +366,7 @@ const Blog = () => {
 
         {/* Blog Details */}
         <div className="p-5 sm:p-6">
-          <h3 className="text-lg sm:text-xl font-semibold text-indigo-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">
+          <h3 className="text-lg sm:text-xl font-semibold text-cyan-900 mb-2 group-hover:text-cyan-600 transition-colors line-clamp-2">
             {post.title}
           </h3>
           <p className="text-gray-600 text-sm sm:text-base mb-4 line-clamp-3">
@@ -374,13 +374,13 @@ const Blog = () => {
           </p>
           <div className="flex justify-between items-center text-xs sm:text-sm text-gray-500">
             <div className="flex items-center">
-              <div className="mr-1 sm:mr-2 text-indigo-400">
+              <div className="mr-1 sm:mr-2 text-cyan-400">
                 <Users className="w-4 h-4" />
               </div>
               <span>{post.author}</span>
             </div>
             <div className="flex items-center">
-              <div className="mr-1 sm:mr-2 text-indigo-400">
+              <div className="mr-1 sm:mr-2 text-cyan-400">
                 <Calendar className="w-4 h-4" />
               </div>
               <span>{post.date}</span>
@@ -391,7 +391,7 @@ const Blog = () => {
           <div className="mt-4 pt-4 border-t border-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
             <a
               href="#"
-              className="inline-flex items-center text-indigo-600 font-medium text-sm"
+              className="inline-flex items-center text-cyan-600 font-medium text-sm"
             >
               Read Article
               <ChevronRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -461,20 +461,20 @@ const Blog = () => {
               data-aos="fade-up"
             >
               <div className="inline-flex items-center justify-center mb-6">
-                <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
-                <span className="mx-4 text-sm md:text-base text-indigo-600 font-semibold uppercase tracking-wider">
+                <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
+                <span className="mx-4 text-sm md:text-base text-cyan-600 font-semibold uppercase tracking-wider">
                   FEATURED ARTICLE
                 </span>
-                <div className="h-[1px] w-8 md:w-12 bg-indigo-500"></div>
+                <div className="h-[1px] w-8 md:w-12 bg-cyan-500"></div>
               </div>
 
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-indigo-900 mb-6 leading-tight"
+                className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-cyan-900 mb-6 leading-tight"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 Discover Our{" "}
-                <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-600 via-cyan-600 to-sky-600 bg-clip-text text-transparent">
                   Latest Insights
                 </span>
               </h2>
@@ -501,9 +501,9 @@ const Blog = () => {
                     alt={featuredPost.title}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/70 to-transparent opacity-0 md:opacity-70"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/70 to-transparent opacity-0 md:opacity-70"></div>
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white px-4 py-1.5 rounded-full text-sm flex items-center gap-2">
+                    <span className="bg-gradient-to-br from-cyan-600 to-sky-700 text-white px-4 py-1.5 rounded-full text-sm flex items-center gap-2">
                       {featuredPost.icon}
                       {featuredPost.category}
                     </span>
@@ -526,7 +526,7 @@ const Blog = () => {
 
                 <div className="p-6 sm:p-8 md:p-10 flex flex-col justify-center">
                   {/* Desktop title - hidden on small screens */}
-                  <h3 className="hidden md:block text-2xl sm:text-3xl font-bold text-indigo-900 mb-4 group-hover:text-indigo-600 transition-colors">
+                  <h3 className="hidden md:block text-2xl sm:text-3xl font-bold text-cyan-900 mb-4 group-hover:text-cyan-600 transition-colors">
                     {featuredPost.title}
                   </h3>
 
@@ -536,18 +536,18 @@ const Blog = () => {
 
                   <div className="flex justify-between items-center text-sm text-gray-500 mb-6">
                     <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-2 text-indigo-500" />
+                      <Users className="w-4 h-4 mr-2 text-cyan-500" />
                       <span>{featuredPost.author}</span>
                     </div>
                     <div className="flex items-center hidden md:flex">
-                      <Calendar className="w-4 h-4 mr-2 text-indigo-500" />
+                      <Calendar className="w-4 h-4 mr-2 text-cyan-500" />
                       <span>{featuredPost.date}</span>
                     </div>
                   </div>
 
                   <a
                     href="#"
-                    className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700 transition-colors group/link"
+                    className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700 transition-colors group/link"
                   >
                     Read Full Article
                     <ChevronRight className="ml-1 w-5 h-5 transition-transform group-hover/link:translate-x-1" />
@@ -565,11 +565,11 @@ const Blog = () => {
           >
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center mb-4">
-                <div className="h-[1px] w-8 sm:w-10 bg-indigo-500"></div>
-                <span className="mx-3 sm:mx-4 text-sm sm:text-base text-indigo-600 font-semibold">
+                <div className="h-[1px] w-8 sm:w-10 bg-cyan-500"></div>
+                <span className="mx-3 sm:mx-4 text-sm sm:text-base text-cyan-600 font-semibold">
                   BROWSE BY CATEGORY
                 </span>
-                <div className="h-[1px] w-8 sm:w-10 bg-indigo-500"></div>
+                <div className="h-[1px] w-8 sm:w-10 bg-cyan-500"></div>
               </div>
             </div>
 
@@ -583,8 +583,8 @@ const Blog = () => {
                   }}
                   className={`px-4 sm:px-6 py-2 rounded-full text-sm sm:text-base transition-all duration-300 ${
                     selectedCategory === category
-                      ? "bg-gradient-to-br from-indigo-600 to-purple-700 text-white shadow-md"
-                      : "border border-indigo-900 text-indigo-900 hover:bg-gradient-to-br hover:from-indigo-600/10 hover:to-purple-700/10"
+                      ? "bg-gradient-to-br from-cyan-600 to-sky-700 text-white shadow-md"
+                      : "border border-cyan-900 text-cyan-900 hover:bg-gradient-to-br hover:from-cyan-600/10 hover:to-sky-700/10"
                   }`}
                 >
                   {category}
@@ -618,8 +618,8 @@ const Blog = () => {
                     onClick={() => handlePageChange(page)}
                     className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                       page === currentPage
-                        ? "bg-gradient-to-br from-indigo-700 to-purple-700 text-white shadow-md transform scale-110"
-                        : "bg-white border border-indigo-300 text-indigo-700 hover:border-indigo-700 hover:shadow-sm"
+                        ? "bg-gradient-to-br from-cyan-700 to-sky-700 text-white shadow-md transform scale-110"
+                        : "bg-white border border-cyan-300 text-cyan-700 hover:border-cyan-700 hover:shadow-sm"
                     }`}
                   >
                     {page}
@@ -682,7 +682,7 @@ const Blog = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-transparent"
                     disabled={isSubscribing}
                   />
                   <Mail className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/60" />
@@ -690,10 +690,10 @@ const Blog = () => {
                 <button
                   type="submit"
                   disabled={isSubscribing || !email}
-                  className={`w-full rounded-xl px-6 py-3 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 text-white font-semibold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 ease-in-out ${
+                  className={`w-full rounded-xl px-6 py-3 bg-gradient-to-r from-cyan-600 via-violet-600 to-sky-600 text-white font-semibold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 ease-in-out ${
                     isSubscribing
                       ? "opacity-75 cursor-not-allowed"
-                      : "hover:from-indigo-700 hover:via-violet-700 hover:to-purple-700"
+                      : "hover:from-cyan-700 hover:via-violet-700 hover:to-sky-700"
                   }`}
                 >
                   {isSubscribing ? "Subscribing..." : "Subscribe Now"}
