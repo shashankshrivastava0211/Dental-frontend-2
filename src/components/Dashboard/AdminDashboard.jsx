@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Auth/AuthContext";
-import { NAME } from "../../constants/constant";
+import { CLINIC_NAME, NAME } from "../../constants/constant";
 
 const navigation = [
   { name: "Dashboard", href: "/admin-dashboard", icon: Home },
@@ -66,9 +66,9 @@ export const AdminDashboard = () => {
             }`}
           >
             <span className="text-base md:text-xl font-bold bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent tracking-tight whitespace-nowrap">
-              32 Pearls
+              {CLINIC_NAME.split(" ")[0]}
               <span className="block text-xs font-normal text-purple-500 mt-[-2px]">
-                Dental Clinic
+                {CLINIC_NAME.split(" ").slice(1).join(" ")}
               </span>
             </span>
           </div>

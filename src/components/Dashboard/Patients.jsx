@@ -264,17 +264,54 @@ function ConfirmedPatients() {
 
       if (response.data && response.data.length > 0) {
         setExistingBill(response.data[0]);
-        toast.success("Prescription loaded successfully");
+        toast.success("Bill loaded successfully");
       } else {
         setExistingBill(null);
       }
 
       setIsBillModalOpen(true);
     } catch (error) {
-      console.error("Error fetching prescription:", error);
+      console.error("Error fetching bill:", error);
       toast.error(
-        error.response?.data?.message || "Failed to fetch prescription details"
+        error.response?.data?.message || "Failed to fetch bill details"
       );
+    }
+  };
+
+  const handleBillSave = async (billData) => {
+    try {
+      // Show loading toast
+      const loadingToast = toast.loading(
+        exhistingBill ? "Updating bill..." : "Creating bill..."
+      );
+
+      if (exhistingBill) {
+        // Update existing bill
+        await axios.put(
+          `${VITE_REACT_APP_BASE_URL}/bill/${exhistingBill._id}`,
+          billData
+        );
+        toast.dismiss(loadingToast);
+        toast.success("Bill updated successfully");
+      } else {
+        // Create new bill
+        await axios.post(`${VITE_REACT_APP_BASE_URL}/bill`, {
+          ...billData,
+          appointmentId: selectedAppointmentId,
+        });
+        toast.dismiss(loadingToast);
+        toast.success("Bill created successfully");
+      }
+
+      setIsBillModalOpen(false);
+      setSelectedAppointmentId(null);
+      setExistingBill(null);
+
+      // Refresh the patient list to update the UI
+      fetchConfirmedPatients();
+    } catch (error) {
+      console.error("Error saving bill:", error);
+      toast.error(error.response?.data?.message || "Failed to save bill");
     }
   };
 
@@ -749,6 +786,7 @@ function ConfirmedPatients() {
           }}
           appointmentId={selectedAppointmentId}
           existingBill={exhistingBill}
+          onSave={handleBillSave}
         />
       )}
     </div>

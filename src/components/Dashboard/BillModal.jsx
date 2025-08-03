@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { X, Plus, Minus, FileText, AlertCircle } from "lucide-react";
+import { X, Plus, Minus, FileText, AlertCircle, Download } from "lucide-react";
 import { VITE_REACT_APP_BASE_URL } from "../utils/constants";
 
-const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
+const BillModal = ({
+  isOpen,
+  onClose,
+  appointmentId,
+  existingBill,
+  onSave,
+}) => {
   const [bill, setBill] = useState({
     items: [{ description: "", amount: "" }],
     discount: "",
@@ -80,31 +86,57 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
     return !Object.values(newErrors).some((e) => e);
   };
 
+  const downloadBill = () => {
+    // Calculate totals
+    const subtotal = bill.items.reduce(
+      (sum, item) => sum + (parseFloat(item.amount) || 0),
+      0
+    );
+    const discount = parseFloat(bill.discount) || 0;
+    const tax = parseFloat(bill.tax) || 0;
+    const total = subtotal - discount + tax;
+
+    // Create bill content
+    const billContent = `
+DENTAL CLINIC BILL
+==================
+
+Date: ${new Date().toLocaleDateString()}
+Bill ID: ${existingBill?._id || "New Bill"}
+
+ITEMS:
+${bill.items
+  .filter((item) => item.description.trim() !== "")
+  .map(
+    (item, index) => `${index + 1}. ${item.description} - ₹${item.amount || 0}`
+  )
+  .join("\n")}
+
+Subtotal: ₹${subtotal}
+Discount: ₹${discount}
+Tax: ₹${tax}
+Total: ₹${total}
+
+Notes: ${bill.notes || "No additional notes"}
+
+Thank you for choosing our dental services!
+    `;
+
+    // Create blob and download
+    const blob = new Blob([billContent], { type: "text/plain" });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `bill-${existingBill?._id || Date.now()}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
-    if (existingBill) {
-      // If editing an existing bill, we might want to update it instead
-      const response = await fetch(
-        `${VITE_REACT_APP_BASE_URL}/bill/${existingBill._id}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(bill),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to update bill");
-      }
-
-      const data = await response.json();
-      onClose(); // Close modal after saving
-      return;
-    }
 
     // Calculate total amount from items
     const amount = bill.items
@@ -124,21 +156,8 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
     };
 
     try {
-      const response = await fetch(`${VITE_REACT_APP_BASE_URL}/bill`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to create bill");
-      }
-
-      const data = await response.json();
-
-      onClose(); // Close modal after saving
+      // Call the onSave callback with the bill data
+      await onSave(payload);
     } catch (error) {
       // Handle error (show toast, etc.)
       console.error(error);
@@ -164,12 +183,23 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
             <FileText className="h-6 w-6 text-indigo-600" />
             {existingBill ? "View/Edit Bill" : "Add New Bill"}
           </h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-          >
-            <X className="h-6 w-6 text-gray-500" />
-          </button>
+          <div className="flex items-center gap-2">
+            {existingBill && (
+              <button
+                onClick={downloadBill}
+                className="inline-flex items-center px-4 py-2 border border-green-300 rounded-lg text-sm font-medium text-green-700 bg-green-50 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Download Bill
+              </button>
+            )}
+            <button
+              onClick={onClose}
+              className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+            >
+              <X className="h-6 w-6 text-gray-500" />
+            </button>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 space-y-8">
@@ -304,7 +334,7 @@ const BillModal = ({ isOpen, onClose, appointmentId, existingBill }) => {
           <div className="flex justify-end space-x-3">
             <button
               type="button"
-              onClick={handleSubmit}
+              onClick={onClose}
               className="px-6 py-3 border border-gray-300 rounded-xl text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
             >
               Cancel
