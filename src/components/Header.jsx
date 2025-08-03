@@ -169,7 +169,7 @@ const Header = () => {
                           scrolled ? "text-teal-700" : "text-white"
                         }`}
                       >
-                        32
+                        {CLINIC_NAME.split(" ")[0]}
                       </span>
                       <span
                         className={`${
@@ -183,7 +183,7 @@ const Header = () => {
                           scrolled ? "text-cyan-600" : "text-white"
                         }`}
                       >
-                        Pearls
+                        {CLINIC_NAME.split(" ")[1]}
                       </span>
                     </span>
                     <span
