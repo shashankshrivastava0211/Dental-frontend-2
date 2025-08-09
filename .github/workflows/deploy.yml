@@ -3,7 +3,7 @@ name: Deploy to EC2 Ubuntu (Dental Frontend)
 on:
   push:
     branches:
-      - main
+      - master # changed from main to master
 
 jobs:
   deploy:
@@ -32,17 +32,17 @@ jobs:
       - name: Prepare EC2 and Deploy dist folder
         run: |
           # Step 1: Clear and fix permissions on EC2
-          ssh -o StrictHostKeyChecking=no -i ec2_key.pem ubuntu@13.49.78.167 << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i ec2_key.pem ubuntu@51.20.253.66 << 'EOF'
             sudo rm -rf /var/www/html/*
             sudo mkdir -p /var/www/html
             sudo chown -R ubuntu:ubuntu /var/www/html
           EOF
 
           # Step 2: Sync built frontend files to EC2
-          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -i ec2_key.pem" dist/ ubuntu@13.49.78.167:/var/www/html/
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -i ec2_key.pem" dist/ ubuntu@51.20.253.66:/var/www/html/
 
           # Step 3: Fix ownership for Nginx and restart
-          ssh -o StrictHostKeyChecking=no -i ec2_key.pem ubuntu@13.49.78.167 << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i ec2_key.pem ubuntu@51.20.253.66 << 'EOF'
             sudo chown -R www-data:www-data /var/www/html
             sudo systemctl restart nginx
           EOF
