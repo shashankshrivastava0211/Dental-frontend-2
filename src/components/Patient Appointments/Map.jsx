@@ -11,7 +11,7 @@ import {
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
-import { PHONE } from "../../constants/constant";
+import { ADDRESS, PHONE } from "../../constants/constant";
 
 const Map = () => {
   const navigate = useNavigate();
@@ -145,7 +145,7 @@ const Map = () => {
                         style={{ border: 0 }}
                         loading="lazy"
                         allowFullScreen
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.802762024058!2d73.7924!3d18.5912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b6df8772c6e1!2sSai%20Vision%2C%20Kunal%20Icon%20Rd%2C%20Pimple%20Saudagar%2C%20Pune%2C%20Maharashtra%20411027!5e0!3m2!1sen!2sin!4v1"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.9290383825114!2d73.78322777617!3d18.577237682527365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9472578c309%3A0x9de42c50e8261706!2sDr.%20Martande&#39;s%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1755193720220!5m2!1sen!2sin"
                       ></iframe>
                     </div>
 
@@ -158,18 +158,11 @@ const Map = () => {
                           </h2>
                           <div className="space-y-4">
                             <div className="flex items-start">
-                              <MapPin className="w-6 h-6 text-indigo-600 mt-1 mr-3" />
                               <div>
                                 <h3 className="font-medium text-gray-900">
                                   Address
                                 </h3>
-                                <p className="text-gray-600">
-                                  107, Sai vision,
-                                  <br />
-                                  Kunal Icon Road, Pimple Saudagar,
-                                  <br />
-                                  Pune, Maharashtra 411027
-                                </p>
+                                <p>{ADDRESS}</p>
                               </div>
                             </div>
 
@@ -179,9 +172,7 @@ const Map = () => {
                                 <h3 className="font-medium text-gray-900">
                                   Phone
                                 </h3>
-                                <p className="text-gray-600">
-                                  +91 844-632-2666
-                                </p>
+                                <p className="text-gray-600">{PHONE}</p>
                               </div>
                             </div>
 
@@ -229,7 +220,7 @@ const Map = () => {
                                 Location
                               </h3>
                               <p className="text-gray-600">
-                                Prime location in Pimple Saudagar
+                                Prime location in Pimple Nilakh
                               </p>
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-sm border border-indigo-100">

@@ -7,7 +7,7 @@ import {
   BarChart2,
   Settings,
   Menu,
-  X,
+  LogOut as X,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Auth/AuthContext";

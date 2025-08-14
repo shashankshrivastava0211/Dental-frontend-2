@@ -17,8 +17,7 @@ export const testimonials = [
   {
     name: "Nakul Chandra",
     service: "Dental Implants",
-    quote:
-      "After my dental implants, I can smile, eat, and talk without any worries. A life-changing experience!",
+    quote: `After my dental implants, I can smile, eat, and talk without any worries. A life-changing experience at ${CLINIC_NAME}!`,
     rating: 5,
     image:
       "https://images.pexels.com/photos/30026793/pexels-photo-30026793/free-photo-of-portrait-of-a-man-in-a-white-shirt.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -26,8 +25,7 @@ export const testimonials = [
   {
     name: "Priya Patel",
     service: "Cosmetic Dentistry",
-    quote:
-      "32 Pearls completely transformed my smile. The team was professional and caring, and the results far exceeded my expectations!",
+    quote: `${CLINIC_NAME} completely transformed my smile. The team was professional and caring, and the results far exceeded my expectations!`,
     rating: 5,
     image:
       "https://images.pexels.com/photos/31430969/pexels-photo-31430969/free-photo-of-black-and-white-portrait-of-smiling-woman.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -35,7 +33,7 @@ export const testimonials = [
   {
     name: "Kuldeep Patil",
     service: "Root Canal",
-    quote: `I had a great experience at 32 Pearls. The staff was friendly and professional, and Dr. ${EMAIL} made me feel completely at ease. The care was top-notch, and I’m very happy with the results. Highly recommend!`,
+    quote: `I had a great experience at ${CLINIC_NAME}. The staff was friendly and professional, and Dr. ${EMAIL} made me feel completely at ease. The care was top-notch, and I’m very happy with the results. Highly recommend!`,
     rating: 5,
     image: "/images/kuldeep.jpg",
   },
