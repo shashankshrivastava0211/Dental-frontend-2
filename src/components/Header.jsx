@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { CLINIC_NAME } from "../constants/constant";
-
+import LOGO from "../assets/LOGO.jpg";
 const navigation = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
@@ -157,11 +157,16 @@ const Header = () => {
               >
                 <div className="flex items-center">
                   <div className="mr-1.5 sm:mr-2 flex items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 p-1 sm:p-1.5 shadow-md">
-                    <Stethoscope
+                    {/* <Stethoscope
                       className={`h-4 w-4 md:h-5 md:w-5 text-white`}
                       aria-hidden="true"
-                    />
+                    /> */}
                   </div>
+                  <img
+                    src={LOGO}
+                    alt={`${CLINIC_NAME} Logo`}
+                    className="h-6 w-6 md:h-10 md:w-10 text-white mr-2"
+                  />
                   <div className="flex flex-col">
                     <span className="text-xl md:text-2xl font-bold tracking-tight">
                       <span

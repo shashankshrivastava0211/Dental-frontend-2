@@ -4,7 +4,7 @@ export const ADDRESS =
 export const PHONE = "+91 9890353072";
 export const EMAIL = "drmartande.dentclin@gmail.com";
 export const NAME = "Dr. Santosh Martande";
-export const CLINIC_NAME = "Dr. Martande`s Dental Clinicccccc";
+export const CLINIC_NAME = "Dr. Martande`s Dental Clinic";
 export const clinicInfo = {
   name: "Dr. Martande Dental Clinic",
   address: "Shop 12, 24K Gliteratti Phase 1 Commercial Complex,",
