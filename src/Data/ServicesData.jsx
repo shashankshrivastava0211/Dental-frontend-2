@@ -48,6 +48,7 @@ export const services = [
 		bgColor: "bg-amber-50",
 		accentColor: "text-amber-600",
 		image: "/images/Icons/root-canal.png",
+		photo: "/images/photos/root canal.png",
 	},
 	{
 		id: "crowns",
@@ -73,6 +74,7 @@ export const services = [
 		bgColor: "bg-teal-50",
 		accentColor: "text-teal-600",
 		image: "/images/Icons/dental-crown.png",
+		photo: "/images/photos/dental crown.png",
 	},
 	{
 		id: "cosmetic-dentistry",
@@ -98,6 +100,7 @@ export const services = [
 		bgColor: "bg-pink-50",
 		accentColor: "text-pink-600",
 		image: "/images/Icons/happy.png",
+		photo: "/images/photos/cosmetic dentistry.png",
 	},
 	{
 		id: "fillings",
@@ -123,6 +126,7 @@ export const services = [
 		bgColor: "bg-emerald-50",
 		accentColor: "text-emerald-600",
 		image: "/images/Icons/filling.png",
+		photo: "/images/photos/dental filling.png",
 	},
 	{
 		id: "dental-implants",
@@ -148,6 +152,7 @@ export const services = [
 		bgColor: "bg-slate-50",
 		accentColor: "text-slate-600",
 		image: "/images/Icons/dental-implant.png",
+		photo: "/images/photos/dental implant.png",
 	},
 	{
 		id: "teeth-replacement",
@@ -173,6 +178,7 @@ export const services = [
 		bgColor: "bg-violet-50",
 		accentColor: "text-violet-600",
 		image: "/images/Icons/replacement.jpeg",
+		photo: "/images/photos/teeth replacement.png",
 	},
 	{
 		id: "extractions",
@@ -198,6 +204,7 @@ export const services = [
 		bgColor: "bg-orange-50",
 		accentColor: "text-orange-600",
 		image: "/images/Icons/tooth-extraction.png",
+		photo: "/images/photos/tooth extraction.png",
 	},
 	{
 		id: "mouth-guards",
@@ -223,6 +230,7 @@ export const services = [
 		bgColor: "bg-blue-50",
 		accentColor: "text-blue-600",
 		image: "/images/Icons/root-canal.png",
+		photo: "/images/photos/mouth guard.png",
 	},
 	{
 		id: "pediatric-dentistry",
@@ -248,6 +256,7 @@ export const services = [
 		bgColor: "bg-cyan-50",
 		accentColor: "text-cyan-600",
 		image: "/images/Icons/anxiety.png",
+		photo: "/images/photos/pediatric care.png",
 	},
 	{
 		id: "gum-care",
@@ -273,6 +282,7 @@ export const services = [
 		bgColor: "bg-red-50",
 		accentColor: "text-red-600",
 		image: "/images/Icons/gingivitis.png",
+		photo: "/images/photos/periodontal care.png",
 	},
 	{
 		id: "orthodontics",
@@ -298,6 +308,7 @@ export const services = [
 		bgColor: "bg-purple-50",
 		accentColor: "text-purple-600",
 		image: "/images/Icons/braces.png",
+		photo: "/images/photos/orthodontics.png",
 	},
 	{
 		id: "dental-imaging",
@@ -318,6 +329,7 @@ export const services = [
 		bgColor: "bg-gray-50",
 		accentColor: "text-gray-600",
 		image: "/images/Icons/x-ray.jpeg",
+		photo: "/images/photos/dental xray.png",
 	},
 	{
 		id: "general-dentistry",
@@ -342,39 +354,39 @@ export const services = [
 		color: "from-blue-500 to-sky-600",
 		bgColor: "bg-blue-50",
 		accentColor: "text-blue-600",
-		image: "/images/Icons/general-dentistry.jpeg",
+		image: "/images/Icons/General Dentistry_care.png",
+		photo: "/images/photos/general-dentistry-pic.jpg",
 	},
 ];
-
 export const specialties = [
 	{
 		title: "Endodontics",
-		icon: <Shield className="w-8 h-8 text-cyan-600" />,
+		icon: <Shield className="w-8 h-8 text-indigo-600" />,
 		description: "Root canal treatments and dental pulp preservation",
 	},
 	{
 		title: "Periodontology",
-		icon: <Stethoscope className="w-8 h-8 text-cyan-600" />,
+		icon: <Stethoscope className="w-8 h-8 text-indigo-600" />,
 		description: "Gum disease treatment and implantology",
 	},
 	{
 		title: "Orthodontics",
-		icon: <LayoutGrid className="w-8 h-8 text-cyan-600" />,
+		icon: <LayoutGrid className="w-8 h-8 text-indigo-600" />,
 		description: "Teeth alignment with braces and clear aligners",
 	},
 	{
 		title: "Pedodontics",
-		icon: <Baby className="w-8 h-8 text-cyan-600" />,
+		icon: <Baby className="w-8 h-8 text-indigo-600" />,
 		description: "Specialized dental care for children",
 	},
 	{
 		title: "Oral Surgery",
-		icon: <Bone className="w-8 h-8 text-cyan-600" />,
+		icon: <Bone className="w-8 h-8 text-indigo-600" />,
 		description: "Complex extractions and surgical procedures",
 	},
 	{
 		title: "Prosthodontics",
-		icon: <Smile className="w-8 h-8 text-cyan-600" />,
+		icon: <Smile className="w-8 h-8 text-indigo-600" />,
 		description: "Restoration and replacement of missing teeth",
 	},
 ];
