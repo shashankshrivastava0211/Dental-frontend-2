@@ -10,8 +10,8 @@
 
 # production
 /build
-constants.js
-/src/components/utils/constants.js
+
+
 
 # misc
 .DS_Store
