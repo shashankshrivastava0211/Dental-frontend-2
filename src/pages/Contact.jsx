@@ -100,7 +100,7 @@ const Contact = () => {
 
 	const handleViewMap = () => {
 		window.open(
-			"https://www.google.com/maps/dir/?api=1&destination=107+Sai+vision+Kunal+Icon+Road+Pimple+Saudagar+Pune",
+			"https://www.google.com/maps/place/Dr.+Martande's+Dental+Clinic/@18.5772403,73.7844753,18z/data=!3m1!4b1!4m6!3m5!1s0x3bc2b9472578c309:0x9de42c50e8261706!8m2!3d18.5772377!4d73.7858027!16s%2Fg%2F11h272xbqn?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D",
 			"_blank"
 		);
 	};
