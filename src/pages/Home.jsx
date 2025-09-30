@@ -90,7 +90,8 @@ export function Home() {
 							data-aos-delay="200">
 							<Sparkles className="w-4 h-4 mr-2 text-teal-600" />
 							<span className="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent font-semibold">
-								Welcome to {CLINIC_NAME}
+								{/* Welcome to {CLINIC_NAME} */}
+								Specialised Dentistry...Personalised Care
 							</span>
 						</div>
 
@@ -165,7 +166,7 @@ export function Home() {
 										<div className="relative w-full h-full rounded-[1.7rem] overflow-hidden">
 											<div className="absolute w-full h-full inset-0 bg-gradient-to-tr from-indigo-600/10 to-purple-600/10 mix-blend-overlay"></div>
 											<img
-												src="/images/healtySmile.png"
+												src="/images/family.png"
 												alt="Modern dental clinic interior"
 												className="w-full h-full object-cover transform transition-all duration-700 group-hover:scale-105"
 											/>

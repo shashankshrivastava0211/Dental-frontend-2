@@ -572,7 +572,7 @@ function App() {
 				/>
 				<meta
 					property="og:title"
-					content="Edit Dental Appointment | 32 Pearls Dental Clinic"
+					content={`Edit Dental Appointment | ${CLINIC_NAME}`}
 				/>
 				<meta
 					property="og:description"
